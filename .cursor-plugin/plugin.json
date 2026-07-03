@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "description": "MCP server for the MoySklad JSON API 1.2: stock, products, orders, documents, reports and document writes; schema-driven catalog, two-stage write safety gate, RUB/kopeck conversion, Russian-language search. Wire it in Cursor with `python3 serve.py ms`.",
   "author": {
-    "name": "Pavel Nikitin",
-    "email": "pavel.nikitin92@gmail.com"
+    "name": "Ilya Utov",
+    "email": "ilyautov@gmail.com",
+    "url": "https://github.com/ilyautov"
   },
-  "homepage": "https://github.com/marfarin/moysklad-mcp-ru",
-  "repository": "https://github.com/marfarin/moysklad-mcp-ru",
+  "homepage": "https://github.com/ilyautov/moysklad-mcp-ru",
+  "repository": "https://github.com/ilyautov/moysklad-mcp-ru",
   "license": "MIT",
   "keywords": ["mcp", "moysklad", "мойсклад", "erp", "inventory", "accounting", "russia"]
 }

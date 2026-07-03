@@ -14,9 +14,9 @@ dependencies = [
 ms-mcp = "moysklad_mcp.server:main"
 
 [project.urls]
-Homepage = "https://github.com/marfarin/moysklad-mcp-ru"
-Repository = "https://github.com/marfarin/moysklad-mcp-ru"
-Issues = "https://github.com/marfarin/moysklad-mcp-ru/issues"
+Homepage = "https://github.com/ilyautov/moysklad-mcp-ru"
+Repository = "https://github.com/ilyautov/moysklad-mcp-ru"
+Issues = "https://github.com/ilyautov/moysklad-mcp-ru/issues"
 
 [project.optional-dependencies]
 dev = [

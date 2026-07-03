@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "MCP-сервер для МойСклад (JSON API 1.2): остатки, товары, заказы, документы, отчёты и запись документов через API. Schema-driven каталог, safety-гейт на запись (два гейта), копейки↔рубли, мультикабинет, поиск по-русски. | MCP server for MoySklad JSON API 1.2: stock, products, orders, documents, reports and document writes; schema-driven catalog, two-stage write safety gate.",
   "author": {
-    "name": "Pavel Nikitin",
-    "email": "pavel.nikitin92@gmail.com",
-    "url": "https://github.com/marfarin"
+    "name": "Ilya Utov",
+    "email": "ilyautov@gmail.com",
+    "url": "https://github.com/ilyautov"
   },
-  "homepage": "https://github.com/marfarin/moysklad-mcp-ru",
-  "repository": "https://github.com/marfarin/moysklad-mcp-ru",
+  "homepage": "https://github.com/ilyautov/moysklad-mcp-ru",
+  "repository": "https://github.com/ilyautov/moysklad-mcp-ru",
   "license": "MIT",
   "keywords": ["mcp", "moysklad", "мойсклад", "erp", "inventory", "accounting", "russia"],
   "mcpServers": {
@@ -17,10 +17,10 @@
   "interface": {
     "displayName": "MoySklad MCP RU",
     "shortDescription": "МойСклад (учёт, склад, документы) для ИИ-агента",
-    "developerName": "Pavel Nikitin",
+    "developerName": "Ilya Utov",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],
-    "websiteURL": "https://github.com/marfarin/moysklad-mcp-ru",
-    "privacyPolicyURL": "https://github.com/marfarin/moysklad-mcp-ru/blob/main/PRIVACY_POLICY.md"
+    "websiteURL": "https://github.com/ilyautov/moysklad-mcp-ru",
+    "privacyPolicyURL": "https://github.com/ilyautov/moysklad-mcp-ru/blob/main/PRIVACY_POLICY.md"
   }
 }
