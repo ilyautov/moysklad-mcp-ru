@@ -12,6 +12,7 @@ dependencies = [
 
 [project.scripts]
 ms-mcp = "moysklad_mcp.server:main"
+moysklad-mcp-ru = "moysklad_mcp.server:main"
 
 [project.urls]
 Homepage = "https://github.com/ilyautov/moysklad-mcp-ru"
