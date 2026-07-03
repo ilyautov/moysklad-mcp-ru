@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>moysklad-mcp-ru — МойСклад в вашем ИИ-ассистенте (JSON API 1.2)</title>
+<meta name="description" content="Подключает ИИ-ассистента (Claude, Cursor, Codex, Cowork) напрямую к вашему МойСклад через JSON API 1.2. Остатки, товары, заказы, контрагенты, документы и отчёты — из ответа МойСклад с указанием источника, а не выдумка. Запись документов — за двойным safety-гейтом и выключена по умолчанию. Ставится в один клик.">
+<meta property="og:title" content="moysklad-mcp-ru — МойСклад в вашем ИИ-ассистенте (JSON API 1.2)">
+<meta property="og:description" content="МойСклад прямо в чате. Остатки, товары, заказы, документы, отчёты — из JSON API 1.2 с источником, а не из воздуха. Запись за двойным safety-гейтом. Ставится в один клик — .mcpb или uvx.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moysklad-mcp-ru.aifrontier.tech/">
+<meta property="og:image" content="https://moysklad-mcp-ru.aifrontier.tech/assets/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://moysklad-mcp-ru.aifrontier.tech/">
+<link rel="icon" type="image/png" href="assets/social-preview.png">
+<link rel="apple-touch-icon" href="assets/social-preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="moysklad-mcp-ru, на главную">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      moysklad-mcp-ru <small>· AI Frontier</small>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#how">Как это работает</a>
+      <a href="#scenarios">Сценарии</a>
+      <a href="#use">Как пользоваться</a>
+      <a href="#install">Установка</a>
+      <a class="btn btn-primary" href="https://github.com/ilyautov/moysklad-mcp-ru">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">moysklad-mcp-ru · alpha</div>
+        <h1>МойСклад <span class="accent">прямо в чате</span></h1>
+        <p class="sub">Подключает ИИ-ассистента напрямую к вашему МойСклад через JSON API 1.2. Остатки, товары, заказы, контрагенты, документы и отчёты приходят из ответа МойСклад с указанием источника, а не выдумываются. Складской учёт становится обычным разговором на русском.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/ilyautov/moysklad-mcp-ru" aria-label="Открыть репозиторий на GitHub">★ Открыть на GitHub</a>
+          <a class="btn btn-ghost" href="#install">Как поставить</a>
+        </div>
+        <div class="trust-mini"><span class="tl" aria-hidden="true"><i class="g"></i><i class="a"></i><i class="r"></i></span><span class="tm-text">Открытый код · MIT · 32 инструмента поверх JSON API 1.2, ядро выверено на реальном аккаунте МойСклад</span></div>
+      </div>
+      <div class="art" role="img" aria-label="Остатки, заказы и документы МойСклад сводятся в один ответ с источником">
+        <div class="win w1"><div class="lines"><b></b><b></b><b></b></div></div>
+        <div class="win w2"><div class="lines"><b></b><b></b><b></b></div></div>
+        <div class="signal" aria-hidden="true"><i class="r"></i><i class="a"></i><i class="g"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="proof">
+    <div class="wrap">
+      <div class="kicker">откуда берётся цифра</div>
+      <h2>«Сколько у меня на складе?»</h2>
+      <p class="proof-lead">Обычный ассистент ответит уверенно и правдоподобно — и назовёт остаток из воздуха. Спросите его дважды и получите два разных ответа:</p>
+      <div class="nums" aria-label="Разные выдуманные числа при повторных вопросах">
+        <span class="n">412</span><span class="ne">≠</span>
+        <span class="n">380</span><span class="ne">≠</span>
+        <span class="n">445</span>
+      </div>
+      <p class="small">Модель не смотрит в базу — она достраивает похоже выглядящую цифру. Для решения о закупке, отгрузке или инвентаризации на такой цифре опираться нельзя. А ручная выгрузка из МойСклад каждый раз отнимает время.</p>
+      <p class="verdict">Здесь цифра берётся из <b>ответа МойСклад по JSON API 1.2</b> — с методом и полем, из которого она пришла. Не пересказ, не догадка.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="s" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Почему это не обёртка вокруг чата</h2>
+        <p>«Подключите AI к складу» обычно значит чат, который уверенно врёт цифрами или норовит поменять данные без спроса. Здесь три принципа против этого.</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h3>Цифры из JSON API 1.2</h3>
+          <p>Остатки, товары, заказы, контрагенты, документы и отчёты приходят из ответа МойСклад с указанием источника и полей. Суммы аккуратно переводятся из копеек в рубли. Не пересказ и не «прикидка» модели.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Двойной safety-гейт на запись</h3>
+          <p>Создание и проведение документов (<b class="mono">ms_create_document</b>, <b class="mono">ms_post_document</b>) выключены по умолчанию. Чтобы включить, нужен и флаг <b class="mono">MOYSKLAD_ALLOW_WRITE=1</b>, и явное подтверждение. Случайно провести отгрузку не выйдет.</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3>Один токен, всё локально</h3>
+          <p>Обращение идёт по одному токену доступа напрямую в API. Никаких браузерных сценариев и капч. Токен лежит локально у вас и в чат не попадает.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section class="s alt killer" id="scenarios">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Готовые сценарии, а не только сырой API</h2>
+        <p>Внутри 32 инструмента поверх JSON API 1.2 МойСклад. Поверх них — пошаговые сценарии под ежедневные задачи склада и продаж: с трактовкой результата и типичными ошибками.</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <span class="tl" aria-hidden="true"><i class="g"></i><i class="a"></i><i class="r"></i></span>
+          <h3>Остатки по складам</h3>
+          <p>Показывает остатки по складам (<b class="mono">ms_get_stock</b>) и ассортимент (<b class="mono">ms_get_products</b>) — что и где лежит, чего мало, что пора дозаказать.</p>
+          <div class="proofline">Остатки и товары — из API, а не на глаз.</div>
+          <span class="tag">остатки по складам</span>
+        </div>
+        <div class="card">
+          <span class="tl" aria-hidden="true"><i class="g"></i><i class="a"></i><i class="r"></i></span>
+          <h3>Заказы и контрагенты</h3>
+          <p>Собирает заказы покупателей (<b class="mono">ms_get_orders</b>) и сопоставляет с контрагентами (<b class="mono">ms_get_counterparties</b>) — кто заказал, на какую сумму, что в работе.</p>
+          <div class="proofline">Заказы и контрагенты — из ответа МойСклад.</div>
+          <span class="tag">заказы покупателей</span>
+        </div>
+        <div class="card">
+          <span class="tl" aria-hidden="true"><i class="g"></i><i class="a"></i><i class="r"></i></span>
+          <h3>Документы и отчёты</h3>
+          <p>Достаёт приёмки, отгрузки, счета и возвраты (<b class="mono">ms_get_documents</b>) и считает прибыль и обороты (<b class="mono">ms_get_profit</b>, <b class="mono">ms_get_turnover</b>) за период.</p>
+          <div class="proofline">Документы и отчёты тянутся из кабинета, свод — кодом.</div>
+          <span class="tag">прибыль и обороты</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="s" id="use">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Как пользоваться: скажите обычными словами</h2>
+        <p>Запоминать методы не нужно. Опишите задачу по-русски, агент подберёт нужный инструмент или сценарий и проведёт по шагам, спросив, чего не хватает. Не помните название метода — есть поиск по-русски (<b class="mono">ms_search_methods</b>).</p>
+      </div>
+      <div class="usage">
+        <div class="ucard">
+          <h3>Остатки и товары</h3>
+          <span class="prompt">покажи остатки по всем складам</span>
+          <span class="prompt">каких товаров осталось меньше десяти</span>
+        </div>
+        <div class="ucard">
+          <h3>Заказы и контрагенты</h3>
+          <span class="prompt">какие заказы покупателей за эту неделю</span>
+          <span class="prompt">сколько мне должен контрагент «Ромашка»</span>
+        </div>
+        <div class="ucard">
+          <h3>Документы и отчёты</h3>
+          <span class="prompt">покажи отгрузки за прошлый месяц</span>
+          <span class="prompt">посчитай прибыль и обороты за квартал</span>
+        </div>
+        <div class="ucard">
+          <h3>Не уверены, с чего начать</h3>
+          <span class="prompt">что ты умеешь по моему МойСклад</span>
+          <span class="prompt">найди метод про возвраты поставщику</span>
+        </div>
+      </div>
+      <p class="small" style="color:var(--mute);margin-top:20px;max-width:62ch">
+        Совет: первым делом скажите <b class="mono">«что ты умеешь по моему МойСклад»</b> — агент покажет готовые сценарии. Несколько аккаунтов (мультикабинет) подключаются и переключаются прямо из чата.
+      </p>
+    </div>
+  </section>
+
+  <!-- INSTALL -->
+  <section class="s alt" id="install">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Установка</h2>
+        <p>Несколько способов, результат один. От вас нужен только один токен доступа МойСклад — зависимости ставятся сами при первом запуске.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div>
+            <h3>Claude Desktop — в один клик</h3>
+            <p>Скачайте <b class="mono">.mcpb</b> из <a href="https://github.com/ilyautov/moysklad-mcp-ru/releases">GitHub Releases</a> и дважды кликните. Claude Desktop сам поставит расширение и спросит токен. Без терминала и Gatekeeper.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Для разработчиков — uvx</h3>
+            <p><b class="mono">uvx moysklad-mcp-ru</b> запускает сервер прямо из PyPI. Ручной запуск из репозитория — командой <b class="mono">python3 serve.py ms</b>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <h3>Попросить своего ИИ — без терминала</h3>
+            <p>Откройте Claude или Cowork и скажите «установи МойСклад MCP». Агент проведёт по встроенному скиллу установки. В Claude Code ставится полностью сам.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stacks">
+        <span class="chip">Claude Desktop — .mcpb</span>
+        <span class="chip">Claude Code / Cowork — родной</span>
+        <span class="chip">Codex — mcp add</span>
+        <span class="chip">Cursor</span>
+        <span class="chip">Gemini — GEMINI.md</span>
+      </div>
+      <p class="small" style="color:var(--mute);margin-top:16px">Где взять токен: МойСклад → Настройки → Пользователи → Токены доступа. Токен кладётся в <b class="mono">MOYSKLAD_TOKEN</b>. Запись документов дополнительно требует <b class="mono">MOYSKLAD_ALLOW_WRITE=1</b>. Токен хранится локально (<b class="mono">chmod 600</b>), в репозиторий и в чат не попадает.</p>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE CTA -->
+  <section class="s" id="opensource">
+    <div class="wrap">
+      <div class="oss">
+        <div class="kicker">открытый проект</div>
+        <h2>Это всё в опен-сорсе. Берите, форкайте, улучшайте.</h2>
+        <p>Открытый инструмент для складского учёта в МойСклад под MIT: проверенное вручную ядро (остатки, товары, заказы, контрагенты, документы, отчёты) выверено на реальном аккаунте, запись документов защищена двойным safety-гейтом и выключена по умолчанию. Поставьте звезду, чтобы проект нашли другие. Нашли косяк или есть идея — заводите issue.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/ilyautov/moysklad-mcp-ru">★ Открыть на GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/ilyautov/moysklad-mcp-ru/issues">Завести issue</a>
+        </div>
+        <div class="repo-line">github.com/ilyautov/moysklad-mcp-ru</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <span class="alpha">alpha</span>
+      &nbsp; Инструмент, а не замена учётчику. Решения по закупкам и проведению документов — за вами.
+    </div>
+    <div>
+      <a href="https://github.com/ilyautov/moysklad-mcp-ru">GitHub</a> ·
+      <a href="https://t.me/gorilla_under_hood">Telegram</a> ·
+      Сделано в <a href="https://aifrontier.tech">AI Frontier</a> · MIT
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

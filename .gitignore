@@ -15,5 +15,11 @@ dist/
 # macOS
 .DS_Store
 
-# Internal research, RUNBOOKs, resumption notes — local only, not published
-docs/
+# Internal research, RUNBOOKs, resumption notes — local only, not published.
+# docs/* ignores everything under docs/ (e.g. docs/superpowers), but the
+# published GitHub Pages site files below are explicitly tracked.
+docs/*
+!docs/index.html
+!docs/styles.css
+!docs/CNAME
+!docs/.nojekyll
