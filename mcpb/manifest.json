@@ -1,0 +1,37 @@
+{
+  "manifest_version": "0.3",
+  "name": "moysklad-mcp-ru",
+  "display_name": "МойСклад (moysklad-mcp-ru)",
+  "version": "0.1.0",
+  "description": "МойСклад прямо в Claude: остатки, товары, заказы, документы, отчёты. Спрашивайте по-русски.",
+  "long_description": "Подключает ассистента напрямую к МойСклад через JSON API 1.2. Остатки, товары, контрагенты, заказы, документы и отчёты. Числа берутся из ответа API с указанием источника, а не выдумываются. Запись документов (приёмки, отгрузки, заказы, счета, возвраты) закрыта двойным safety-гейтом и выключена по умолчанию — включайте только на тестовом кабинете.",
+  "author": { "name": "Ilya Utov", "url": "https://github.com/ilyautov" },
+  "homepage": "https://github.com/ilyautov/moysklad-mcp-ru",
+  "documentation": "https://github.com/ilyautov/moysklad-mcp-ru/blob/main/README.md",
+  "support": "https://github.com/ilyautov/moysklad-mcp-ru/issues",
+  "repository": { "type": "git", "url": "https://github.com/ilyautov/moysklad-mcp-ru" },
+  "license": "MIT",
+  "keywords": ["moysklad", "мойсклад", "erp", "inventory", "accounting", "ru"],
+  "server": {
+    "type": "python",
+    "entry_point": "server/serve.py",
+    "mcp_config": {
+      "command": "python",
+      "args": ["${__dirname}/server/serve.py", "ms"],
+      "env": {
+        "MOYSKLAD_MCP_HOME": "${HOME}/.moysklad-mcp",
+        "MOYSKLAD_TOKEN": "${user_config.moysklad_token}"
+      }
+    }
+  },
+  "user_config": {
+    "moysklad_token": {
+      "type": "string",
+      "title": "MoySklad токен доступа",
+      "description": "МойСклад → Настройки → Пользователи → Токены доступа. Оставьте пустым, если храните токен в ~/.moysklad-mcp/cabinets.json.",
+      "sensitive": true,
+      "required": false
+    }
+  },
+  "compatibility": { "runtimes": { "python": ">=3.10" } }
+}
