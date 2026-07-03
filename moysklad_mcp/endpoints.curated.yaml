@@ -1,0 +1,285 @@
+# MoySklad JSON API 1.2 — curated read core (PoC thin slice).
+#
+# Every record verified against the official doc repo
+# github.com/moysklad/api-remap-1.2-doc (branch master, read 2026-06-25).
+# Single host, so host is omitted and filled from default_host.
+#
+# Schema mirrors core/registry.py EndpointSpec:
+#   operation_id, section, method, path, scope, safety, summary,
+#   pagination (offset|none), items_path, rate_limit, doc, keywords.
+#
+# MetaArray lists put rows under "rows". The /current stock report returns a
+# bare JSON array, so items_path is "" (the response itself is the list).
+#
+# core's EndpointSpec requires `host` at construction (it is multi-host for WB),
+# so we set the single MoySklad host explicitly on every record.
+#
+# LIVE-VERIFIED on a real cabinet 2026-06-25 (token in env, not in chat):
+#   - Bearer auth -> HTTP/2 200.
+#   - report/stock/all: cost 5 limit-units (X-RateLimit-Limit 45 -> Remaining 40),
+#     window X-Lognex-Retry-TimeInterval 3000 ms. Bucket = 45/3s (standard weight),
+#     NOT the 22/3s user-token bucket predicted before the check.
+#   - entity/assortment: MetaArray with keys [context, meta, rows]. items_path rows OK.
+#   - report/stock/all/current: bare JSON array. items_path "" OK.
+#   - CRITICAL: Accept header MUST be 'application/json;charset=utf-8' exactly. The
+#     engine default 'application/json' is rejected with 400 code 1062. Fixed in
+#     moysklad_mcp _build_headers (overrides the engine default). This blocked every
+#     server-side call until fixed.
+#   - offset=0 is valid (was a red herring in debugging).
+#   - kopecks verified end-to-end: 1500 / 3000 rub came back correct via ms_get_products.
+
+default_host: api.moysklad.ru
+
+endpoints:
+  - operation_id: ms_stock_current
+    section: reports
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/report/stock/all/current
+    scope: ""
+    safety: read
+    summary: >-
+      Short current stock report, grouped by product. Fast everyday call.
+      Returns a flat array of {assortmentId, stock|quantity|...}. Use
+      stockType=quantity|reserve|inTransit|stock and include=zeroLines.
+    pagination: none
+    items_path: ""
+    rate_limit: "standard weight; bucket 45/3s LIVE-confirmed 2026-06-25 (window 3000ms; not the 22/3s user-token tier)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/reports/_report_stock.md
+    keywords: [остатки, остаток, склад, запас, наличие, сколько, текущие, current, stock]
+
+  - operation_id: ms_stock_all
+    section: reports
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/report/stock/all
+    scope: ""
+    safety: read
+    summary: >-
+      Extended stock report with full product detail (prices, images). Heavy
+      and slow — meant for periodic full sync, not frequent polling. Prices in
+      kopecks. Paginated via limit/offset, rows under "rows".
+    pagination: offset
+    items_path: rows
+    rate_limit: "HEAVY: 5 limit-units/request LIVE-confirmed 2026-06-25 (45->40 on a 45-bucket). Prefer ms_stock_current for everyday."
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/reports/_report_stock.md
+    keywords: [остатки, расширенный, полный, синхронизация, выгрузка, stock, all]
+
+  - operation_id: ms_assortment_list
+    section: dictionaries
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/assortment
+    scope: ""
+    safety: read
+    summary: >-
+      Assortment: unified list of products, services, bundles and variants with
+      sale prices, buy price and stock. All money fields in kopecks. Paginated
+      via limit/offset (max limit 1000), rows under "rows".
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight; MetaArray [context,meta,rows] LIVE-confirmed 2026-06-25; supports async=true for big exports"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_assortment.md
+    keywords: [товары, товар, ассортимент, номенклатура, продукты, цены, прайс, assortment, products]
+
+  - operation_id: ms_customerorder_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/customerorder
+    scope: ""
+    safety: read
+    summary: >-
+      Customer orders list. Document total in "sum" (kopecks). Paginated via
+      limit/offset, rows under "rows". Filter by moment, state, agent via the
+      filter query param.
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_customerOrder.md
+    keywords: [заказы, заказ, заказы покупателей, продажи, клиенты, customerorder, orders]
+
+  # ---- Hot core, Phase 1 (doc-verified paths/forms; live weight not yet confirmed) ----
+  # Reports — money values in kopecks; profit/money/turnover need momentFrom & momentTo.
+
+  - operation_id: ms_get_profit
+    section: reports
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/report/profit/byproduct
+    scope: ""
+    safety: read
+    summary: >-
+      Profitability by product: sale price, cost, profit and margin per item.
+      Money in kopecks. Requires momentFrom and momentTo (period). rows under "rows".
+    pagination: offset
+    items_path: rows
+    rate_limit: "report — doc-verified; confirm live weight on cabinet (likely heavy like stock)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/reports/_report_pnl.md
+    keywords: [прибыль, прибыльность, маржа, рентабельность, profit, byproduct, отчёт]
+
+  - operation_id: ms_get_money
+    section: reports
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/report/money/byaccount
+    scope: ""
+    safety: read
+    summary: >-
+      Cash balances by account/cashbox. Money in kopecks. rows under "rows".
+      For cashflow over time use /report/money/plotseries (in the map).
+    pagination: offset
+    items_path: rows
+    rate_limit: "report — doc-verified; confirm live weight on cabinet"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/reports/_report_money.md
+    keywords: [деньги, остаток, счета, касса, баланс, money, byaccount, средства]
+
+  - operation_id: ms_get_turnover
+    section: reports
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/report/turnover/all
+    scope: ""
+    safety: read
+    summary: >-
+      Turnover by product: opening, income, outcome, closing in quantity and
+      money (kopecks). Requires momentFrom and momentTo. rows under "rows".
+    pagination: offset
+    items_path: rows
+    rate_limit: "report — doc-verified; confirm live weight on cabinet"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/reports/_report_turnover.md
+    keywords: [обороты, оборот, движение, turnover, продажи, расход, приход]
+
+  # Dictionaries
+
+  - operation_id: ms_get_counterparties
+    section: dictionaries
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/counterparty
+    scope: ""
+    safety: read
+    summary: >-
+      Counterparties (customers and suppliers). Balance fields in kopecks.
+      Filter by name, type, tags via the filter param. rows under "rows".
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_counterparty.md
+    keywords: [контрагенты, контрагент, клиенты, поставщики, counterparty, партнёры]
+
+  - operation_id: ms_get_stores
+    section: dictionaries
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/store
+    scope: ""
+    safety: read
+    summary: >-
+      Warehouses/stores. Small dictionary. rows under "rows". Use store hrefs to
+      filter stock and turnover reports by warehouse.
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_store.md
+    keywords: [склады, склад, warehouse, store, размещение]
+
+  # Documents under roles (read) — totals in "sum" (kopecks)
+
+  - operation_id: ms_demand_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/demand
+    scope: ""
+    safety: read
+    summary: 'Shipments (демонстрация отгрузок). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_demand.md
+    keywords: [отгрузки, отгрузка, демонстрация, demand, продажи, расход]
+
+  - operation_id: ms_supply_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/supply
+    scope: ""
+    safety: read
+    summary: 'Supplies/receipts (приёмки). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_supply.md
+    keywords: [приёмки, приемка, поступление, supply, закупка, приход]
+
+  - operation_id: ms_purchaseorder_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/purchaseorder
+    scope: ""
+    safety: read
+    summary: 'Purchase orders (заказы поставщику). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_purchaseOrder.md
+    keywords: [заказы поставщику, заказ поставщику, закупка, purchaseorder, снабжение]
+
+  - operation_id: ms_invoiceout_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/invoiceout
+    scope: ""
+    safety: read
+    summary: 'Customer invoices (счета покупателям). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+    keywords: [счета покупателям, счёт, выставленные, invoiceout, оплата]
+
+  - operation_id: ms_invoicein_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/invoicein
+    scope: ""
+    safety: read
+    summary: 'Supplier invoices (счета поставщиков). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+    keywords: [счета поставщиков, счёт, полученные, invoicein, оплата]
+
+  - operation_id: ms_salesreturn_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/salesreturn
+    scope: ""
+    safety: read
+    summary: 'Sales returns (возвраты покупателей). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_sales_return.md
+    keywords: [возвраты покупателей, возврат, salesreturn, рекламация]
+
+  - operation_id: ms_purchasereturn_list
+    section: documents
+    method: GET
+    host: api.moysklad.ru
+    path: /api/remap/1.2/entity/purchasereturn
+    scope: ""
+    safety: read
+    summary: 'Purchase returns (возвраты поставщикам). Total in "sum" (kopecks). rows under "rows".'
+    pagination: offset
+    items_path: rows
+    rate_limit: "standard weight (doc-verified)"
+    doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_purchase_return.md
+    keywords: [возвраты поставщикам, возврат, purchasereturn, рекламация]

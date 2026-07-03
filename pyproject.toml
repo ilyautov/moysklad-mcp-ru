@@ -1,0 +1,42 @@
+[project]
+name = "moysklad-mcp-ru"
+version = "0.1.0"
+description = "MCP server for the MoySklad JSON API 1.2 (schema-driven, safety-gated, document writes)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+ms-mcp = "moysklad_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/marfarin/moysklad-mcp-ru"
+Repository = "https://github.com/marfarin/moysklad-mcp-ru"
+Issues = "https://github.com/marfarin/moysklad-mcp-ru/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pre-commit>=3.5",
+    "pip-audit>=2.7",
+    "detect-secrets>=1.5",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# `core` is vendored from ilyautov/marketplaces-mcp-ru (MIT) — see NOTICE.
+packages = ["core", "moysklad_mcp"]
+
+[tool.setuptools.package-data]
+# endpoints.curated.yaml MUST ship: the curated (live-verified) layer wins over
+# the generated map at load time — omitting it silently drops our hard-won facts.
+moysklad_mcp = ["endpoints.yaml", "endpoints.curated.yaml", "workflows.yaml", "entities.yaml"]
+core = ["entities.yaml"]

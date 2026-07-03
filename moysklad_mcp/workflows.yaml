@@ -1,0 +1,42 @@
+# MoySklad analytical workflows — curated recipes over the catalog (PoC).
+# Operation ids reference endpoints.yaml. Field guidance grounded in the
+# official doc (read 2026-06-25); mark live-verified after the cabinet run.
+
+workflows:
+  - name: stock_now
+    category: warehouse
+    when_to_use: Quick read of current stock to spot what is low or out.
+    steps:
+      - operation_id: ms_stock_current
+        why: >-
+          Short current-stock report (fast, standard weight). Returns a flat
+          array of {assortmentId, stock/quantity}. Use stockType=quantity for
+          physical, =freeStock for available-to-sell.
+    interpret: >
+      The /current report is a point-in-time snapshot (no history) — store it
+      yourself for trends. assortmentId joins back to ms_assortment_list rows
+      by their id. For full detail (prices, per-store) use ms_stock_all, but it
+      is heavy (5 limit-units/request) — do it on a schedule, not on every ask.
+    common_mistakes:
+      - Polling ms_stock_all repeatedly — it is the slow full report, weight 5.
+      - Expecting stock history from a snapshot; there is none.
+
+  - name: orders_review
+    category: sales
+    when_to_use: Review customer orders and tie them to products and prices.
+    steps:
+      - operation_id: ms_customerorder_list
+        why: >-
+          Customer orders with document total in "sum" (kopecks → rubles in the
+          typed tool). Filter by moment/state via the filter param.
+      - operation_id: ms_assortment_list
+        why: >-
+          Product/price reference (sale prices in kopecks) to enrich order
+          positions by assortment id.
+    interpret: >
+      Money in raw API is kopecks; the typed tools ms_get_orders / ms_get_products
+      return rubles. Order positions live under a separate positions endpoint
+      (not in this PoC slice) — the list gives header totals.
+    common_mistakes:
+      - Reading "sum" as rubles — it is kopecks (divide by 100).
+      - Paging past limit=1000 in one request; walk with ms_fetch_all (offset).

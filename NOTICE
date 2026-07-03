@@ -1,0 +1,21 @@
+moysklad-mcp-ru
+===============
+
+This project includes a VENDORED copy of the service-agnostic `core/` engine
+from:
+
+    ilyautov/marketplaces-mcp-ru
+    https://github.com/ilyautov/marketplaces-mcp-ru
+    Commit: 9cdcdd82ae6e0c79a71041326c6cb8b676865273  (vendored 2026-06-25)
+    License: MIT — Copyright (c) 2026 Ilya Utov
+
+The full upstream MIT license text is preserved in core/LICENSE.upstream.
+
+What is vendored, unchanged: the entire `core/` package (client, registry,
+safety, errors, paginate, credentials, entities, tools, workflows). MoySklad
+adaptations that will be contributed back upstream (X-Lognex-Retry-After header,
+proactive throttle) are NOT yet applied to this copy; they land after the live
+cabinet validation and are offered to upstream as pull requests.
+
+Everything under moysklad_mcp/ (MoySklad ServiceConfig, catalog, money layer,
+typed tools, workflows) is original to this project.

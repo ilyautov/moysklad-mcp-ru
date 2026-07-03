@@ -1,0 +1,15 @@
+# sdist contents. Runtime data (the catalogs) must ship inside the packages.
+include README.md README.en.md QUICKSTART.md CHANGELOG.md LICENSE NOTICE
+include .env.example .mcp.json
+include serve.py install.py install.command install.sh install.bat
+recursive-include moysklad_mcp *.yaml
+recursive-include core *.yaml
+recursive-include install-skill *.md
+recursive-include .claude-plugin *.json
+recursive-include .codex-plugin *.json
+recursive-include .cursor-plugin *.json
+global-exclude __pycache__ *.py[cod] .DS_Store
+prune .venv
+prune dist
+prune docs
+prune .pytest_cache

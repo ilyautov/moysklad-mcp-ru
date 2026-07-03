@@ -1,0 +1,19 @@
+# Secrets — never commit
+.env
+*cabinets.json
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# macOS
+.DS_Store
+
+# Internal research, RUNBOOKs, resumption notes — local only, not published
+docs/

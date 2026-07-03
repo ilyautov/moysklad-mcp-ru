@@ -1,0 +1,20 @@
+# MoySklad business-entity index for Russian-language search.
+# Schema mirrors core/entities.py: each entity = {key, synonyms, match}.
+# `match` items are matched as substrings against an endpoint's `section`,
+# so a query synonym routes to every endpoint in that section.
+# Loaded by EntityIndex.load(path); a broken file degrades to plain search.
+
+entities:
+  - key: stock
+    synonyms: [остатки, остаток, остатков, склад, склады, складе, склада,
+               запас, запасы, наличие]
+    match: [reports]
+
+  - key: assortment
+    synonyms: [товары, товар, товаров, товаре, ассортимент, ассортимента,
+               номенклатура, продукты, продуктов, прайс, цены]
+    match: [dictionaries]
+
+  - key: customerorder
+    synonyms: [заказы, заказ, заказов, "заказы покупателей", продажи, клиенты]
+    match: [documents]
