@@ -119,9 +119,14 @@
    `install.command` (macOS) / `install.bat` (Windows), вставь токен.
 3. **Технический.** `python3 install.py --client <твой-клиент>` (claude-desktop /
    claude-code / codex / opencode).
+4. **Для разработчиков.** Пакет на PyPI — запуск без установки: `uvx moysklad-mcp-ru`.
+   Для Claude Desktop — готовый `.mcpb`-бандл из
+   [релиза](https://github.com/ilyautov/moysklad-mcp-ru/releases) (двойной клик,
+   токен вводится в окне настроек). Полный список каналов и как режется релиз —
+   в **[docs/DISTRIBUTION.md](docs/DISTRIBUTION.md)**.
 
-Ни `pip install`, ни правки JSON: зависимости ставятся сами при первом запуске
-(локальный venv), от тебя — только токен.
+Для путей 1–3 не нужно ни `pip install`, ни правки JSON: зависимости ставятся сами
+при первом запуске (локальный venv), от тебя — только токен.
 
 **Где взять токен:** МойСклад → Настройки → Пользователи → Токены доступа. Токен
 хранится в `~/.moysklad-mcp/cabinets.json` (локально, chmod 600, никогда в репо
