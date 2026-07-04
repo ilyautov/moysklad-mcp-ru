@@ -3,12 +3,12 @@
   "description": "MCP-сервер для МойСклад (JSON API 1.2): остатки, товары, заказы, контрагенты, документы, отчёты и ЗАПИСЬ документов (приёмки, отгрузки, заказы, счета, возвраты) через API напрямую. Schema-driven каталог, safety-гейт на запись (два гейта), копейки↔рубли, мультикабинет, поиск по-русски. | MCP server for the MoySklad JSON API 1.2: stock, products, orders, counterparties, documents, reports and document writes; schema-driven catalog, two-stage write safety gate, RUB/kopeck conversion, multi-cabinet, Russian-language search.",
   "version": "0.1.0",
   "author": {
-    "name": "Pavel Nikitin",
-    "email": "pavel.nikitin92@gmail.com",
-    "url": "https://github.com/marfarin"
+    "name": "Ilya Utov",
+    "email": "ilyautov@gmail.com",
+    "url": "https://github.com/ilyautov"
   },
-  "homepage": "https://github.com/marfarin/moysklad-mcp-ru",
-  "repository": "https://github.com/marfarin/moysklad-mcp-ru",
+  "homepage": "https://github.com/ilyautov/moysklad-mcp-ru",
+  "repository": "https://github.com/ilyautov/moysklad-mcp-ru",
   "license": "MIT",
   "keywords": [
     "mcp",

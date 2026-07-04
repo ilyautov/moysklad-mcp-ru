@@ -96,6 +96,10 @@ MOYSKLAD_CONFIG = ServiceConfig(
     build_headers=_build_headers,
     user_agent="moysklad-mcp-ru/0.0.1 (+https://github.com/)",
     store=CredentialStore(path=MS_STORE_PATH),
+    # Host allowlist: every request (typed tools AND ms_call_raw) may only reach
+    # the MoySklad API. Stops a mis-prompted/compromised agent from exfiltrating
+    # the Bearer token to an attacker host. All endpoints live under api.moysklad.ru.
+    allowed_host_suffixes=[".moysklad.ru"],
     # whoami auto-naming deferred — needs a live-verified endpoint (/context/employee).
     whoami=None,
 )

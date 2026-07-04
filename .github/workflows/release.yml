@@ -1,0 +1,35 @@
+name: Release
+
+# On every v* tag: build the release zip and attach it to the GitHub Release.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Build release zip
+        run: python scripts/package_release.py
+      - name: Build Claude Desktop bundle (.mcpb)
+        run: python scripts/package_mcpb.py
+      - name: Publish artifacts to the GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Create the Release on first run for the tag; upload to it on re-runs.
+        # `gh release upload` alone fails with "release not found" when the tag
+        # was pushed via git without a Release object existing yet.
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/*.zip dist/*.mcpb --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/*.zip dist/*.mcpb \
+              --title "$GITHUB_REF_NAME" --generate-notes
+          fi

@@ -24,3 +24,15 @@ jobs:
         run: python3 serve.py ms --selfcheck
       - name: "Tests (offline — incl. safety-catalog: 0 mutations marked read)"
         run: python3 -m pytest tests/ -q
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run pre-commit
+        run: |
+          python -m pip install pre-commit
+          pre-commit run --all-files

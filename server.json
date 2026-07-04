@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ilyautov/moysklad-mcp-ru",
+  "title": "MoySklad MCP (RU)",
+  "description": "MoySklad JSON API 1.2 in your AI assistant — schema-driven, safety-gated document writes.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/ilyautov/moysklad-mcp-ru",
+    "source": "github"
+  },
+  "websiteUrl": "https://moysklad-mcp-ru.aifrontier.tech",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "moysklad-mcp-ru",
+      "version": "0.1.0",
+      "runtimeHint": "uvx",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "MOYSKLAD_TOKEN",
+          "description": "MoySklad personal access token (Настройки → Пользователи → Токены доступа). Optional if credentials are stored in ~/.moysklad-mcp/cabinets.json.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "MOYSKLAD_ALLOW_WRITE",
+          "description": "Set to 1 to allow document writes (create/post/delete). Off by default. Point only at a TEST cabinet.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
