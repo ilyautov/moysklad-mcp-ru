@@ -24,3 +24,5 @@ docs/*
 !docs/CNAME
 !docs/.nojekyll
 !docs/DISTRIBUTION.md
+!docs/assets/
+!docs/assets/social-preview.png
