@@ -3,7 +3,7 @@
   "name": "io.github.ilyautov/moysklad-mcp-ru",
   "title": "MoySklad MCP (RU)",
   "description": "MoySklad JSON API 1.2 in your AI assistant — schema-driven, safety-gated document writes.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "url": "https://github.com/ilyautov/moysklad-mcp-ru",
     "source": "github"
@@ -14,7 +14,7 @@
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "moysklad-mcp-ru",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "runtimeHint": "uvx",
       "transport": { "type": "stdio" },
       "environmentVariables": [

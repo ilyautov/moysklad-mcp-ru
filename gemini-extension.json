@@ -1,6 +1,6 @@
 {
   "name": "moysklad-mcp-ru",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP-сервер для МойСклад (JSON API 1.2): остатки, товары, заказы, документы, отчёты, запись документов через safety-гейт, поиск по-русски. MCP server for MoySklad.",
   "mcpServers": {
     "moysklad": {

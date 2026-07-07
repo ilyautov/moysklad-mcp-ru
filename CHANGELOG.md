@@ -3,6 +3,16 @@
 Все заметные изменения moysklad-mcp-ru. Формат — [Keep a Changelog](https://keepachangelog.com),
 версии по [SemVer](https://semver.org).
 
+## [0.1.1] — 2026-07-07
+
+### Added
+- Публикация в **MCP Registry**: маркер `mcp-name: io.github.ilyautov/moysklad-mcp-ru`
+  в README для ownership-валидации реестра (PyPI-описание).
+
+### Changed
+- Версия синхронизирована во всех манифестах (pyproject, server.json, mcpb,
+  gemini-extension, plugin, marketplace).
+
 ## [0.1.0] — 2026-06-26
 
 Первый публичный срез: read-ядро + запись документов, выверенные на живом тестовом

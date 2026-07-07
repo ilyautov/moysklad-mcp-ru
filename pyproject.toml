@@ -1,6 +1,6 @@
 [project]
 name = "moysklad-mcp-ru"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server for the MoySklad JSON API 1.2 (schema-driven, safety-gated, document writes)."
 readme = "README.md"
 requires-python = ">=3.10"

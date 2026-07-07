@@ -9,7 +9,7 @@
       "name": "moysklad-mcp-ru",
       "source": "./",
       "description": "MCP-сервер над МойСклад JSON API 1.2: остатки, товары, заказы, контрагенты, документы, отчёты и ЗАПИСЬ документов через двойной safety-гейт. Числа из реального API, копейки↔рубли, мультикабинет, поиск по-русски. | MCP server over the MoySklad JSON API — schema-driven, safety-gated document writes.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Ilya Utov",
         "email": "ilyautov@gmail.com"
