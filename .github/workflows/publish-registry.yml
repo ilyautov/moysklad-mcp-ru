@@ -1,0 +1,81 @@
+name: Publish server.json to the MCP Registry
+
+# На каждый тег v*: дождаться, пока PyPI отдаёт эту версию, и опубликовать
+# server.json в официальном MCP Registry.
+#
+# Владение неймспейсом io.github.ilyautov/* реестр проверяет по GitHub OIDC
+# из этого репозитория, поэтому токен нигде не хранится.
+#
+# workflow_dispatch нужен, чтобы до-опубликовать уже выпущенный тег.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Существующий тег релиза, например v0.1.2"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  registry:
+    name: Publish to MCP Registry
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # GitHub OIDC -> авторизация в реестре для io.github.ilyautov/*
+    steps:
+      - name: Определить тег
+        id: tag
+        shell: bash
+        run: |
+          REF="${{ github.event.inputs.tag || github.ref_name }}"
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "version=${REF#v}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          ref: ${{ steps.tag.outputs.ref }}
+          persist-credentials: false
+
+      - name: Версия в теге должна совпасть с pyproject и server.json
+        shell: bash
+        env:
+          V: ${{ steps.tag.outputs.version }}
+        run: |
+          PY=$(grep -m1 '^version' pyproject.toml | sed 's/.*"\(.*\)".*/\1/')
+          SJ=$(python3 -c "import json;print(json.load(open('server.json'))['version'])")
+          echo "тег=$V pyproject=$PY server.json=$SJ"
+          [ "$V" = "$PY" ] || { echo "версия тега не совпала с pyproject" >&2; exit 1; }
+          [ "$V" = "$SJ" ] || { echo "версия тега не совпала с server.json" >&2; exit 1; }
+
+      - name: Дождаться, пока PyPI отдаёт эту версию
+        shell: bash
+        env:
+          V: ${{ steps.tag.outputs.version }}
+        run: |
+          for i in $(seq 1 30); do
+            if curl -fsS "https://pypi.org/pypi/moysklad-mcp-ru/$V/json" >/dev/null; then
+              echo "PyPI отдаёт $V"; exit 0
+            fi
+            echo "PyPI ещё не отдаёт $V (попытка $i/30)"; sleep 30
+          done
+          echo "PyPI так и не отдал $V — publish-pypi.yml упал или ещё идёт" >&2
+          exit 1
+
+      - name: Поставить mcp-publisher
+        shell: bash
+        run: |
+          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.1/mcp-publisher_linux_amd64.tar.gz" \
+            | tar xz mcp-publisher
+          ./mcp-publisher --help >/dev/null
+
+      - name: Логин (GitHub OIDC)
+        run: ./mcp-publisher login github-oidc
+
+      # Без --dry-run: в mcp-publisher 1.8.1 этот флаг всё равно публикует,
+      # и следующая настоящая публикация падает на "cannot publish duplicate version".
+      - name: Публикация
+        run: ./mcp-publisher publish
