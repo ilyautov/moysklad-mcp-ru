@@ -55,7 +55,7 @@
 - **GuardedClient:** процессный write-guard теперь покрывает и сырые мета-тулы
   (`call_method`/`call_raw`), не только типизированные. `core` не патчен.
 - **Дистрибуция:** `install.py` (claude-desktop/claude-code/codex/opencode),
-  `install.command`/`.bat`/`.sh`, `install-skill/` (zero-terminal), плагин-манифесты
+  `install.command`/`.bat`/`.sh`, `moysklad-mcp-install/` (zero-terminal), плагин-манифесты
   (`.claude-plugin`/`.codex-plugin`/`.cursor-plugin`), `.mcp.json`.
 - **70 офлайн-тестов**, selfcheck (32 тула), без сети и токена.
 

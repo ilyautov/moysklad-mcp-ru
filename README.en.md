@@ -55,7 +55,7 @@ CI test. Creating always makes a DRAFT; posting is a separate step.
 See **[QUICKSTART.md](QUICKSTART.md)**. Three paths, one result:
 
 1. **Easiest — ask your AI (no terminal).** Tell Claude / Cowork: *"install
-   MoySklad MCP"* — the agent walks the bundled `install-skill/`.
+   MoySklad MCP"* — the agent walks the bundled `moysklad-mcp-install/`.
 2. **Download & click.** Grab the release zip, unzip, double-click
    `install.command` (macOS) / `install.bat` (Windows), paste your token.
 3. **Technical.** `python3 install.py --client <claude-desktop|claude-code|codex|opencode>`.

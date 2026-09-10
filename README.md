@@ -131,7 +131,7 @@ uvx moysklad-mcp-ru
 Подробный гайд — в **[QUICKSTART.md](QUICKSTART.md)**. Три пути, один результат:
 
 1. **Проще всего — попроси своего ИИ (без терминала).** Открой Claude / Cowork и
-   скажи: *«установи МойСклад MCP»* — агент проведёт по встроенному `install-skill/`.
+   скажи: *«установи МойСклад MCP»* — агент проведёт по встроенному `moysklad-mcp-install/`.
 2. **Скачать и кликнуть.** Возьми release-zip, распакуй, двойной клик
    `install.command` (macOS) / `install.bat` (Windows), вставь токен.
 3. **Технический.** `python3 install.py --client <твой-клиент>` (claude-desktop /
@@ -188,7 +188,7 @@ moysklad_mcp/         ← специфика МойСклад: server.py, build.
 tests/                ← 70 офлайн-тестов
 scripts/              ← ingest_moysklad.py (парсер доки), package_release.py
 serve.py              ← лаунчер (авто-venv): python3 serve.py ms [--selfcheck]
-install.py + .command/.bat/.sh + install-skill/   ← установка под 4 клиента
+install.py + .command/.bat/.sh + moysklad-mcp-install/   ← установка под 4 клиента
 .mcp.json + .claude-plugin/ .codex-plugin/ .cursor-plugin/   ← плагин-манифесты
 docs/                 ← исследование, аудит, RUNBOOK-и, точки возобновления (dev-доки)
 ```
