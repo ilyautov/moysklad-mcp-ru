@@ -11,10 +11,27 @@
 > мультикабинет, поиск по-русски. Для Claude Code, Cursor, Codex, Cowork и Claude
 > Desktop.
 
-![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-![Версия](https://img.shields.io/badge/версия-0.1.0-B5491F)
-![Тулы](https://img.shields.io/badge/тулов-32-2D7D4F)
-![Тесты](https://img.shields.io/badge/тестов-70-2D7D4F)
+[![PyPI](https://img.shields.io/pypi/v/moysklad-mcp-ru?label=pypi&color=B5491F)](https://pypi.org/project/moysklad-mcp-ru/)
+[![MCP Registry](https://img.shields.io/badge/MCP-Registry-2D7D4F)](https://registry.modelcontextprotocol.io/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Тулов](https://img.shields.io/badge/%D1%82%D1%83%D0%BB%D0%BE%D0%B2-32-2D7D4F)](#что-внутри)
+[![Тестов](https://img.shields.io/badge/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-100-2D7D4F)](https://github.com/ilyautov/moysklad-mcp-ru/actions/workflows/ci.yml)
+[![Сайт](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-aifrontier.tech-9A3E1A)](https://moysklad-mcp-ru.aifrontier.tech)
+[![Звёзды](https://img.shields.io/github/stars/ilyautov/moysklad-mcp-ru?style=flat&label=%D0%B7%D0%B2%D1%91%D0%B7%D0%B4%D1%8B&color=B5491F&logo=github&logoColor=white)](https://github.com/ilyautov/moysklad-mcp-ru/stargazers)
+
+<p align="center">
+  <a href="https://moysklad-mcp-ru.aifrontier.tech">
+    <img src="assets/social-preview.png" alt="moysklad-mcp-ru: МойСклад в ИИ-ассистенте. Остатки, заказы, отчёты и запись документов через JSON API 1.2, с гейтом безопасности" width="760">
+  </a>
+</p>
+
+**Быстрый старт**, без установки в систему:
+
+```bash
+uvx moysklad-mcp-ru
+```
+
+Клиенты, токен и способ «попроси своего ИИ поставить»: в разделе [«Установка»](#установка).
 
 > ⚠️ **alpha.** Помогает с операционкой учёта, но это инструмент, а не замена
 > бухгалтера. Курированное ядро и срез записи выверены боем на тестовом кабинете;
