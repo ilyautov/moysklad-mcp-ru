@@ -19,3 +19,10 @@ cabinet validation and are offered to upstream as pull requests.
 
 Everything under moysklad_mcp/ (MoySklad ServiceConfig, catalog, money layer,
 typed tools, workflows) is original to this project.
+
+COPYRIGHT / КОПИРАЙТ
+
+Portions of this project (the vendored `core/` engine) are Copyright (c) 2026
+Ilya Utov and are used under the MIT License — see core/LICENSE.upstream.
+Everything else is Copyright (c) 2026 moysklad-mcp-ru contributors under the
+MIT License in LICENSE.
