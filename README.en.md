@@ -11,7 +11,7 @@
 > your live books. Auto-pagination, multi-cabinet, Russian-language search.
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-0.1.0-B5491F)
+[![PyPI](https://img.shields.io/pypi/v/moysklad-mcp-ru?label=pypi&color=B5491F)](https://pypi.org/project/moysklad-mcp-ru/)
 ![Tools](https://img.shields.io/badge/tools-32-2D7D4F)
 ![Tests](https://img.shields.io/badge/tests-70-2D7D4F)
 
