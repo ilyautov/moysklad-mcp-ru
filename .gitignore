@@ -22,6 +22,8 @@ docs/*
 !docs/index.html
 !docs/styles.css
 !docs/CNAME
+!docs/robots.txt
+!docs/sitemap.xml
 !docs/.nojekyll
 !docs/DISTRIBUTION.md
 !docs/assets/
