@@ -679,5 +679,82 @@ def main() -> None:
     mcp.run()
 
 
+def _doctor() -> int:
+    """Проверка установки без единого запроса в МойСклад.
+
+    Нужна потому, что `--selfcheck` живёт в `serve.py`, а он не ставится
+    пакетом: человек, поставивший сервер через `uvx moysklad-mcp-ru` (этот путь
+    рекламируют реестр и каталоги), никакого способа проверить установку не
+    имел. Сеть тут не трогаем: токен может быть ещё не заведён, а диагностика
+    должна работать и до него.
+    """
+    import asyncio
+    import platform
+    import sys
+
+    try:
+        from importlib.metadata import version
+
+        pkg = version("moysklad-mcp-ru")
+    except Exception:
+        pkg = "не установлен как пакет (запуск из исходников)"
+
+    tools = asyncio.run(mcp.list_tools())
+    methods = catalog.all()
+    write_on = str(os.environ.get("MOYSKLAD_ALLOW_WRITE", "")).lower() in {"1", "true", "yes", "on"}
+    token = "MOYSKLAD_TOKEN" in os.environ
+
+    print(f"moysklad-mcp-ru {pkg}")
+    print(f"Python          {platform.python_version()} ({sys.executable})")
+    print(f"Инструментов    {len(tools)}")
+    print(f"Методов каталога {len(methods)}")
+    print(f"Кабинеты        {MS_STORE_PATH} "
+          f"{'есть' if MS_STORE_PATH.exists() else 'нет (это нормально до первого ms_add_cabinet)'}")
+    print(f"MOYSKLAD_TOKEN  {'задан' if token else 'не задан'}")
+    print(f"Запись          {'разрешена (MOYSKLAD_ALLOW_WRITE)' if write_on else 'выключена по умолчанию'}")
+    print()
+    print("OK: сервер поднимается, каталог читается." if tools and methods
+          else "ОШИБКА: сервер поднялся, но каталог пуст.")
+    return 0 if tools and methods else 1
+
+
+USAGE = """moysklad-mcp-ru — MCP-сервер для JSON API МойСклада 1.2
+
+  moysklad-mcp-ru            запустить сервер (stdio, так его зовёт клиент)
+  moysklad-mcp-ru doctor     проверить установку: версия, инструменты, каталог
+  moysklad-mcp-ru --version  версия пакета
+
+Токен: МойСклад -> Настройки -> Пользователи -> Токены доступа.
+Документация: https://github.com/ilyautov/moysklad-mcp-ru"""
+
+
+def cli() -> None:
+    """Точка входа пакета: без аргументов сервер, с `doctor` диагностика.
+
+    Раньше точкой входа был сам `main`, и он молча проглатывал любой аргумент:
+    `moysklad-mcp-ru --help` завершался с кодом 0 и пустым выводом, что для
+    человека, который только что поставил пакет, неотличимо от поломки.
+    """
+    import sys
+
+    args = sys.argv[1:]
+    if not args:
+        main()
+        return
+    if args[0] == "doctor":
+        raise SystemExit(_doctor())
+    if args[0] in {"-h", "--help", "help"}:
+        print(USAGE)
+        return
+    if args[0] in {"-V", "--version"}:
+        from importlib.metadata import version
+
+        print(version("moysklad-mcp-ru"))
+        return
+    print(f"moysklad-mcp-ru: неизвестный аргумент {args[0]!r}\n", file=sys.stderr)
+    print(USAGE, file=sys.stderr)
+    raise SystemExit(2)
+
+
 if __name__ == "__main__":
     main()

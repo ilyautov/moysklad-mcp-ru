@@ -13,7 +13,7 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 [![PyPI](https://img.shields.io/pypi/v/moysklad-mcp-ru?label=pypi&color=B5491F)](https://pypi.org/project/moysklad-mcp-ru/)
 ![Tools](https://img.shields.io/badge/tools-32-2D7D4F)
-![Tests](https://img.shields.io/badge/tests-70-2D7D4F)
+![Tests](https://img.shields.io/badge/tests-104-2D7D4F)
 
 > ⚠️ **alpha.** A tool, not a replacement for an accountant. The curated core and
 > the write slice are battle-verified on a test cabinet; methods imported from the
@@ -64,7 +64,7 @@ No `pip install`, no JSON editing — deps self-install on first launch. **Token
 MoySklad → Settings → Users → Access tokens. Stored in
 `~/.moysklad-mcp/cabinets.json` (local, chmod 600, never in the repo or chat).
 
-Verify: `python3 serve.py ms --selfcheck` → "OK: ms ready, N tools".
+Verify. Installed as a package (`uvx`, `pip`): `moysklad-mcp-ru doctor` prints the version, the tool count, the catalog size and the state of the write gate, and makes no network calls. From a clone: `python3 serve.py ms --selfcheck` → "OK: ms ready, N tools".
 
 ## Money
 

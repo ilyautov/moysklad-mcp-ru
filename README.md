@@ -15,7 +15,7 @@
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-2D7D4F)](https://registry.modelcontextprotocol.io/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Тулов](https://img.shields.io/badge/%D1%82%D1%83%D0%BB%D0%BE%D0%B2-32-2D7D4F)](#что-внутри)
-[![Тестов](https://img.shields.io/badge/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-100-2D7D4F)](https://github.com/ilyautov/moysklad-mcp-ru/actions/workflows/ci.yml)
+[![Тестов](https://img.shields.io/badge/%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-104-2D7D4F)](https://github.com/ilyautov/moysklad-mcp-ru/actions/workflows/ci.yml)
 [![Сайт](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-aifrontier.tech-9A3E1A)](https://moysklad-mcp-ru.aifrontier.tech)
 [![Звёзды](https://img.shields.io/github/stars/ilyautov/moysklad-mcp-ru?style=flat&label=%D0%B7%D0%B2%D1%91%D0%B7%D0%B4%D1%8B&color=B5491F&logo=github&logoColor=white)](https://github.com/ilyautov/moysklad-mcp-ru/stargazers)
 
@@ -150,7 +150,7 @@ uvx moysklad-mcp-ru
 и не в чат). Поддержка **мультикабинета** — несколько аккаунтов с переключением из
 чата (`ms_add_cabinet` / `ms_use_cabinet`).
 
-**Проверка после установки:** `python3 serve.py ms --selfcheck` → «OK: ms ready, N tools».
+**Проверка после установки.** Поставили пакетом (`uvx`, `pip`): `moysklad-mcp-ru doctor` — печатает версию, число инструментов, размер каталога и состояние гейта записи, в сеть не ходит. Работаете из клона: `python3 serve.py ms --selfcheck` → «OK: ms ready, N tools».
 
 ## Деньги
 

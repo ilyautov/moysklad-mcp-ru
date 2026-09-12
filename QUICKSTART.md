@@ -46,7 +46,7 @@ Codex, OpenCode, Cursor, Cowork) без ручного редактирован�
 Перезапустите клиент (конфиг читается при старте). Первый запуск создаёт venv и
 ставит зависимости (несколько секунд).
 
-- Селфчек (токен не нужен): `python3 serve.py ms --selfcheck` → «OK: ms ready, N tools».
+- Селфчек (токен не нужен). Из пакета: `moysklad-mcp-ru doctor`. Из клона: `python3 serve.py ms --selfcheck` → «OK: ms ready, N tools».
 - Из чата: `ms_check_auth` (активный кабинет, секрет не эхает) → `ms_ping` (HTTP 200)
   → `ms_get_products` или `ms_get_stock`. Вернулись реальные данные — готово.
 
