@@ -24,6 +24,7 @@ docs/*
 !docs/CNAME
 !docs/robots.txt
 !docs/sitemap.xml
+!docs/llms.txt
 !docs/.nojekyll
 !docs/DISTRIBUTION.md
 !docs/assets/
