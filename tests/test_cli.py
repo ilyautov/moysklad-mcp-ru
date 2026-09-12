@@ -8,8 +8,8 @@
 ставится. Тесты держат три факта: точка входа это `cli`, `doctor` печатает
 диагностику и не ходит в сеть, мусорный аргумент падает с кодом 2.
 """
+import re
 import sys
-import tomllib
 from pathlib import Path
 
 import pytest
@@ -20,8 +20,11 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def _scripts() -> dict[str, str]:
-    return tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))[
-        "project"]["scripts"]
+    # Регулярка, а не tomllib: пакет заявлен с Python 3.10, а tomllib появился
+    # в 3.11, и тест бы падал на самой младшей поддерживаемой версии.
+    body = re.search(r"\[project\.scripts\]\n(.*?)(?:\n\[|\Z)",
+                     (ROOT / "pyproject.toml").read_text(encoding="utf-8"), re.S).group(1)
+    return dict(re.findall(r'^(\S+)\s*=\s*"([^"]+)"', body, re.M))
 
 
 def test_console_scripts_point_at_cli_not_main():
