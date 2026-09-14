@@ -22,7 +22,7 @@
 
 ## What's inside
 
-**Not "one tool per endpoint", but 8 generic meta-tools over a catalog** — full
+**Not "one tool per endpoint", but 10 generic meta-tools over a catalog** — full
 API coverage with a small surface: `ms_search_methods`, `ms_describe_method`,
 `ms_call_method`, `ms_write_method`, `ms_delete_method`, `ms_get_raw`,
 `ms_write_raw`, `ms_delete_raw`, `ms_fetch_all`, `ms_map` + cabinet tools.
