@@ -25,6 +25,7 @@ docs/*
 !docs/robots.txt
 !docs/sitemap.xml
 !docs/llms.txt
+!docs/b4061b69c4b780ceb43009049e52f48f.txt
 !docs/.nojekyll
 !docs/DISTRIBUTION.md
 !docs/assets/
