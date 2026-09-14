@@ -33,6 +33,9 @@ repos:
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
+        # Файл ключа IndexNow обязан содержать ровно ключ и ничего больше,
+        # поэтому перевод строки в конце ему дописывать нельзя.
+        exclude: ^docs/[0-9a-f]{32}\.txt$
       - id: check-merge-conflict
       - id: check-yaml
       - id: check-json
