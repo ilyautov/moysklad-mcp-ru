@@ -100,6 +100,7 @@ MOYSKLAD_CONFIG = ServiceConfig(
     # the MoySklad API. Stops a mis-prompted/compromised agent from exfiltrating
     # the Bearer token to an attacker host. All endpoints live under api.moysklad.ru.
     allowed_host_suffixes=[".moysklad.ru"],
+    api_docs="https://dev.moysklad.ru/doc/api/remap/1.2/",
     # whoami auto-naming deferred — needs a live-verified endpoint (/context/employee).
     whoami=None,
 )
