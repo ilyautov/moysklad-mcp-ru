@@ -20,6 +20,7 @@ dist/
 # published GitHub Pages site files below are explicitly tracked.
 docs/*
 !docs/index.html
+!docs/privacy.html
 !docs/styles.css
 !docs/CNAME
 !docs/robots.txt

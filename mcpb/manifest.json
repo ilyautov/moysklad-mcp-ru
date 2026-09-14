@@ -11,6 +11,7 @@
   "support": "https://github.com/ilyautov/moysklad-mcp-ru/issues",
   "repository": { "type": "git", "url": "https://github.com/ilyautov/moysklad-mcp-ru" },
   "license": "MIT",
+  "privacy_policies": ["https://moysklad-mcp-ru.aifrontier.tech/privacy.html"],
   "keywords": ["moysklad", "мойсклад", "erp", "inventory", "accounting", "ru"],
   "server": {
     "type": "python",

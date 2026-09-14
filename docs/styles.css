@@ -164,3 +164,8 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-si
   .nums .ne{font-size:22px}
   .wrap{padding:0 18px}
 }
+
+/* Подстраницы: хлебные крошки и заголовок первого уровня в шапке секции. */
+.crumbs{font:500 13.5px/1.4 "JetBrains Mono",monospace;color:var(--mute);margin-bottom:20px}
+.crumbs a{color:var(--body)}
+.sec-head h1{font-size:clamp(26px,4vw,38px);line-height:1.15}
