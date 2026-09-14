@@ -7,7 +7,7 @@
   в конфиг клиента или в чат. Сервер работает там же, где ваш агент (локально).
 - **Запись за двумя гейтами.** (1) Процессный guard: запись выключена по умолчанию,
   включается `MOYSKLAD_ALLOW_WRITE=1`, опц. пин к кабинету `MOYSKLAD_WRITE_CABINETS`;
-  покрывает и сырые `ms_call_method`/`ms_call_raw`. (2) Per-call гейт: `write`
+  покрывает и сырые `ms_call_method` и raw-инструменты. (2) Per-call гейт: `write`
   требует `confirm_write=true`, `destructive` (проведение/удаление) — ещё и
   `i_understand_this_modifies_data=true`. Без подтверждений в сеть ничего не уходит.
 - **Создание делает черновик** (`applicable:false`); проведение, которое двигает

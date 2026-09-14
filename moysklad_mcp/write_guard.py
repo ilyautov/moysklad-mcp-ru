@@ -76,7 +76,8 @@ _WRITE_VERBS = frozenset({"POST", "PUT", "PATCH", "DELETE"})
 class GuardedClient:
     """Compose the process write-guard over the vendored core client so EVERY
     mutating HTTP call passes it — not only the typed write tools. The generic
-    meta-tools (`ms_call_method` / `ms_call_raw`) reach the network through
+    meta-tools (`ms_call_method`, `ms_write_method`, `ms_delete_method`,
+    `ms_get_raw`, `ms_write_raw`, `ms_delete_raw`) reach the network through
     `client.request` / `client.call_spec`; wrapping BOTH closes the gap where a
     raw write could hit a (possibly production) cabinet while writes are globally
     disabled. GET/read calls pass through untouched (no guard, no overhead).

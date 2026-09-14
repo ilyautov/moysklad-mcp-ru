@@ -2,7 +2,8 @@
 """moysklad_mcp — MCP server for the MoySklad JSON API 1.2.
 
 Exposes MoySklad through the schema-driven meta-tools from `core`
-(ms_search_methods / ms_describe_method / ms_call_method / ms_call_raw /
+(ms_search_methods / ms_describe_method / ms_call_method / ms_write_method /
+ms_delete_method / ms_get_raw / ms_write_raw / ms_delete_raw /
 ms_fetch_all / ms_check_auth + cabinet tools) plus a few typed convenience
 tools for the everyday manager questions (stock, products, orders).
 
@@ -96,7 +97,7 @@ MOYSKLAD_CONFIG = ServiceConfig(
     build_headers=_build_headers,
     user_agent="moysklad-mcp-ru/0.0.1 (+https://github.com/)",
     store=CredentialStore(path=MS_STORE_PATH),
-    # Host allowlist: every request (typed tools AND ms_call_raw) may only reach
+    # Host allowlist: every request (typed tools AND the raw tools) may only reach
     # the MoySklad API. Stops a mis-prompted/compromised agent from exfiltrating
     # the Bearer token to an attacker host. All endpoints live under api.moysklad.ru.
     allowed_host_suffixes=[".moysklad.ru"],

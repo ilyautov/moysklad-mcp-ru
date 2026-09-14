@@ -1,6 +1,6 @@
 default_host: api.moysklad.ru
 _generated_note: Reconnaissance map parsed from the official doc repo (api-remap-1.2-doc). Paths/verbs
-  reliable; bodies and rare verbs confirm via doc or ms_call_raw. Curated records (live-verified) override
+  reliable; bodies and rare verbs confirm via doc or ms_get_raw. Curated records (live-verified) override
   on (method, path).
 endpoints:
 - operation_id: ms_stock_current

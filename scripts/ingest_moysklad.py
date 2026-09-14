@@ -20,7 +20,7 @@ delete -> destructive). The curated hot core (endpoints.curated.yaml) wins on
 (method, path): live-verified records are never overwritten by the generated map.
 
 Pure offline. Output is a "reconnaissance map": paths and verbs are reliable;
-bodies and rare verbs must be confirmed against the doc or called via ms_call_raw.
+bodies and rare verbs must be confirmed against the doc or called via ms_get_raw.
 
 Usage:
     python3 scripts/ingest_moysklad.py --doc /path/to/api-remap-1.2-doc \
@@ -325,7 +325,7 @@ def main() -> None:
         "default_host": HOST,
         "_generated_note": ("Reconnaissance map parsed from the official doc repo "
                             "(api-remap-1.2-doc). Paths/verbs reliable; bodies and "
-                            "rare verbs confirm via doc or ms_call_raw. Curated "
+                            "rare verbs confirm via doc or ms_get_raw. Curated "
                             "records (live-verified) override on (method, path)."),
         "endpoints": [{k: v for k, v in s.items() if k != "_generated_note"}
                       for s in merged],
