@@ -2,7 +2,13 @@
   "mcpServers": {
     "moysklad": {
       "command": "python3",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/serve.py", "ms"]
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/serve.py",
+        "ms"
+      ],
+      "env": {
+        "MOYSKLAD_TOKEN": "${user_config.moysklad_token}"
+      }
     }
   }
 }

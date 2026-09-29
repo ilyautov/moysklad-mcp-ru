@@ -1,10 +1,10 @@
 {
   "name": "moysklad-mcp-ru",
-  "description": "MCP-сервер для МойСклад (JSON API 1.2): остатки, товары, заказы, контрагенты, документы, отчёты и ЗАПИСЬ документов (приёмки, отгрузки, заказы, счета, возвраты) через API напрямую. Schema-driven каталог, safety-гейт на запись (два гейта), копейки↔рубли, мультикабинет, поиск по-русски. | MCP server for the MoySklad JSON API 1.2: stock, products, orders, counterparties, documents, reports and document writes; schema-driven catalog, two-stage write safety gate, RUB/kopeck conversion, multi-cabinet, Russian-language search.",
+  "displayName": "MoySklad API (unofficial)",
   "version": "0.2.0",
+  "description": "MCP-сервер для МойСклад (JSON API 1.2): остатки, товары, заказы, контрагенты, документы, отчёты и ЗАПИСЬ документов (приёмки, отгрузки, заказы, счета, возвраты) через API напрямую. Schema-driven каталог, safety-гейт на запись (два гейта), копейки↔рубли, мультикабинет, поиск по-русски. | MCP server for the MoySklad JSON API 1.2: stock, products, orders, counterparties, documents, reports and document writes; schema-driven catalog, two-stage write safety gate, RUB/kopeck conversion, multi-cabinet, Russian-language search.",
   "author": {
     "name": "Ilya Utov",
-    "email": "ilyautov@gmail.com",
     "url": "https://github.com/ilyautov"
   },
   "homepage": "https://github.com/ilyautov/moysklad-mcp-ru",
@@ -21,5 +21,17 @@
     "russia",
     "ozon",
     "wildberries"
-  ]
+  ],
+  "privacyPolicyUrl": "https://moysklad-mcp-ru.aifrontier.tech/privacy.html",
+  "supportUrl": "https://github.com/ilyautov/moysklad-mcp-ru/issues",
+  "documentationUrl": "https://github.com/ilyautov/moysklad-mcp-ru#readme",
+  "userConfig": {
+    "moysklad_token": {
+      "type": "string",
+      "title": "MoySklad токен доступа",
+      "description": "МойСклад → Настройки → Пользователи → Токены доступа. Оставьте пустым, если храните токен в ~/.moysklad-mcp/cabinets.json.",
+      "required": false,
+      "sensitive": true
+    }
+  }
 }
