@@ -40,5 +40,5 @@ packages = ["core", "moysklad_mcp"]
 [tool.setuptools.package-data]
 # endpoints.curated.yaml MUST ship: the curated (live-verified) layer wins over
 # the generated map at load time — omitting it silently drops our hard-won facts.
-moysklad_mcp = ["endpoints.yaml", "endpoints.curated.yaml", "workflows.yaml", "entities.yaml"]
+moysklad_mcp = ["endpoints.yaml", "endpoints.part*.yaml", "endpoints.curated.yaml", "workflows.yaml", "entities.yaml"]
 core = ["entities.yaml"]

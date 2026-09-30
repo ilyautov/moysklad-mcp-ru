@@ -333,10 +333,35 @@ def main() -> None:
     if a.dry_run:
         print("(dry-run — nothing written)")
         return
-    Path(a.out).write_text(
-        yaml.safe_dump(out, allow_unicode=True, sort_keys=False, width=100),
-        encoding="utf-8")
+    write_catalog(Path(a.out), out)
     print(f"WROTE {a.out}  ({len(merged)} endpoints)")
+
+
+PART_SIZE = 300  # endpoints per file; keeps each file well under 256 KiB
+
+
+def write_catalog(out_path: Path, out: dict) -> None:
+    """Write the catalog as a head file plus `<stem>.partN.yaml` siblings.
+
+    The head keeps default_host, the note and the first PART_SIZE endpoints and
+    lists the rest under `parts`; Catalog.from_yaml reads them back in order.
+    """
+    eps = out["endpoints"]
+    chunks = [eps[i:i + PART_SIZE] for i in range(0, len(eps), PART_SIZE)] or [[]]
+    for old in out_path.parent.glob(f"{out_path.stem}.part*.yaml"):
+        old.unlink()
+    names = [f"{out_path.stem}.part{n}.yaml" for n in range(2, len(chunks) + 1)]
+    head = {k: v for k, v in out.items() if k != "endpoints"}
+    if names:
+        head["parts"] = names
+    head["endpoints"] = chunks[0]
+
+    def dump(obj: dict) -> str:
+        return yaml.safe_dump(obj, allow_unicode=True, sort_keys=False, width=100)
+
+    out_path.write_text(dump(head), encoding="utf-8")
+    for name, chunk in zip(names, chunks[1:]):
+        (out_path.parent / name).write_text(dump({"endpoints": chunk}), encoding="utf-8")
 
 
 if __name__ == "__main__":

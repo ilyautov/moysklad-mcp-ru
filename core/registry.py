@@ -99,9 +99,14 @@ class Catalog:
                   entities: Optional[Any] = None) -> "Catalog":
         raw = yaml.safe_load(Path(path).read_text(encoding="utf-8")) or {}
         default_host = raw.get("default_host", default_host)
-        specs: list[EndpointSpec] = []
-        for rec in raw.get("endpoints", []):
-            specs.append(EndpointSpec(**rec))
+        records = list(raw.get("endpoints", []))
+        # Large catalogs are split into sibling files listed under `parts`
+        # (keeps each file under the plugin directory's 256 KiB scan limit).
+        for part in raw.get("parts", []):
+            part_raw = yaml.safe_load(
+                (Path(path).parent / part).read_text(encoding="utf-8")) or {}
+            records.extend(part_raw.get("endpoints", []))
+        specs = [EndpointSpec(**rec) for rec in records]
         return cls(specs, default_host=default_host, entities=entities)
 
     def get(self, operation_id: str) -> Optional[EndpointSpec]:

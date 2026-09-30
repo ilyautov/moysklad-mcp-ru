@@ -1,0 +1,4709 @@
+endpoints:
+- operation_id: ms_get_factureout_by_factureout
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/factureout/{factureout_id}
+  scope: ''
+  safety: read
+  summary: Получить Счет-фактуру выданный
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_factureout.md
+  keywords:
+  - счет
+  - фактуру
+  - выданный
+  - factureout
+- operation_id: ms_put_factureout_by_factureout
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/factureout/{factureout_id}
+  scope: ''
+  safety: write
+  summary: Изменить Счет-фактуру выданный
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_factureout.md
+  keywords:
+  - счет
+  - фактуру
+  - выданный
+  - factureout
+- operation_id: ms_get_group
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/group
+  scope: ''
+  safety: read
+  summary: Получить Отделы
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_group.md
+  keywords:
+  - отделы
+  - group
+- operation_id: ms_post_group
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/group
+  scope: ''
+  safety: write
+  summary: Создать Отдел
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_group.md
+  keywords:
+  - отдел
+  - group
+- operation_id: ms_delete_group_by_group
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/group/{group_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Отдел
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_group.md
+  keywords:
+  - отдел
+  - group
+- operation_id: ms_get_group_by_group
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/group/{group_id}
+  scope: ''
+  safety: read
+  summary: Получить Отдел
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_group.md
+  keywords:
+  - отдел
+  - group
+- operation_id: ms_put_group_by_group
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/group/{group_id}
+  scope: ''
+  safety: write
+  summary: Изменить Отдел
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_group.md
+  keywords:
+  - отдел
+  - group
+- operation_id: ms_get_internalorder
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder
+  scope: ''
+  safety: read
+  summary: Получить Внутренние заказы
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутренние
+  - заказы
+  - internalorder
+- operation_id: ms_post_internalorder
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder
+  scope: ''
+  safety: write
+  summary: Создать Внутренний заказ
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутренний
+  - заказ
+  - internalorder
+- operation_id: ms_post_internalorder_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Внутренних заказов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутренних
+  - заказов
+  - internalorder
+- operation_id: ms_get_internalorder_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Внутренних заказов
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - метаданные
+  - внутренних
+  - заказов
+  - internalorder
+- operation_id: ms_get_internalorder_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - internalorder
+- operation_id: ms_post_internalorder_new
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/new
+  scope: ''
+  safety: write
+  summary: Массовое создание и обновление Внутренних заказов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - обновление
+  - внутренних
+  - заказов
+  - internalorder
+- operation_id: ms_put_internalorder_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/new
+  scope: ''
+  safety: write
+  summary: Шаблон Внутреннего заказа
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутреннего
+  - заказа
+  - internalorder
+- operation_id: ms_delete_internalorder_by_internalorder
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Внутренний заказ
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутренний
+  - заказ
+  - internalorder
+- operation_id: ms_get_internalorder_by_internalorder
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}
+  scope: ''
+  safety: read
+  summary: Получить Внутренний заказ
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутренний
+  - заказ
+  - internalorder
+- operation_id: ms_put_internalorder_by_internalorder
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}
+  scope: ''
+  safety: write
+  summary: Изменить Внутренний заказ
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - внутренний
+  - заказ
+  - internalorder
+- operation_id: ms_get_internalorder_by_internalorder_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Внутреннего заказа
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - позиции
+  - внутреннего
+  - заказа
+  - internalorder
+- operation_id: ms_post_internalorder_by_internalorder_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позиции Внутреннего заказа
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - позиции
+  - внутреннего
+  - заказа
+  - internalorder
+- operation_id: ms_post_internalorder_by_internalorder_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - позиций
+  - internalorder
+- operation_id: ms_delete_internalorder_by_internalorder_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - позицию
+  - internalorder
+- operation_id: ms_get_internalorder_by_internalorder_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - позицию
+  - internalorder
+- operation_id: ms_put_internalorder_by_internalorder_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/internalorder/{internalorder_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_internalOrder.md
+  keywords:
+  - позицию
+  - internalorder
+- operation_id: ms_get_inventory
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory
+  scope: ''
+  safety: read
+  summary: Получить Инвентаризации
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризации
+  - inventory
+- operation_id: ms_post_inventory
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory
+  scope: ''
+  safety: write
+  summary: Создать Инвентаризацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризацию
+  - inventory
+- operation_id: ms_post_inventory_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Инвентаризаций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризаций
+  - inventory
+- operation_id: ms_get_inventory_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Инвентаризаций
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - метаданные
+  - инвентаризаций
+  - inventory
+- operation_id: ms_get_inventory_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - inventory
+- operation_id: ms_put_inventory_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/new
+  scope: ''
+  safety: write
+  summary: Шаблон Инвентаризации
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризации
+  - inventory
+- operation_id: ms_delete_inventory_by_inventory
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Инвентаризацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризацию
+  - inventory
+- operation_id: ms_get_inventory_by_inventory
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}
+  scope: ''
+  safety: read
+  summary: Получить Инвентаризацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризацию
+  - inventory
+- operation_id: ms_put_inventory_by_inventory
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}
+  scope: ''
+  safety: write
+  summary: Изменить Инвентаризацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - инвентаризацию
+  - inventory
+- operation_id: ms_get_inventory_by_inventory_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - позиции
+  - inventory
+- operation_id: ms_post_inventory_by_inventory_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - позицию
+  - inventory
+- operation_id: ms_post_inventory_by_inventory_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - позиций
+  - inventory
+- operation_id: ms_delete_inventory_by_inventory_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - позицию
+  - inventory
+- operation_id: ms_get_inventory_by_inventory_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - позицию
+  - inventory
+- operation_id: ms_put_inventory_by_inventory_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/inventory/{inventory_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_inventory.md
+  keywords:
+  - позицию
+  - inventory
+- operation_id: ms_post_invoicein
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein
+  scope: ''
+  safety: write
+  summary: Создать Счет поставщика
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - счет
+  - поставщика
+  - invoicein
+- operation_id: ms_post_invoicein_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Счетов поставщиков
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - счетов
+  - поставщиков
+  - invoicein
+- operation_id: ms_get_invoicein_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Счетов поставщиков
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - метаданные
+  - счетов
+  - поставщиков
+  - invoicein
+- operation_id: ms_get_invoicein_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - invoicein
+- operation_id: ms_put_invoicein_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/new
+  scope: ''
+  safety: write
+  summary: Шаблон Счета поставщика
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - счета
+  - поставщика
+  - invoicein
+- operation_id: ms_delete_invoicein_by_invoicein
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Счет поставщика
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - счет
+  - поставщика
+  - invoicein
+- operation_id: ms_get_invoicein_by_invoicein
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}
+  scope: ''
+  safety: read
+  summary: Получить Счет поставщика
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - счет
+  - поставщика
+  - invoicein
+- operation_id: ms_put_invoicein_by_invoicein
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}
+  scope: ''
+  safety: write
+  summary: Изменить Счет поставщика
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - счет
+  - поставщика
+  - invoicein
+- operation_id: ms_get_invoicein_by_invoicein_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Счета поставщика
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - позиции
+  - счета
+  - поставщика
+  - invoicein
+- operation_id: ms_post_invoicein_by_invoicein_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - позицию
+  - invoicein
+- operation_id: ms_post_invoicein_by_invoicein_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - позиций
+  - invoicein
+- operation_id: ms_delete_invoicein_by_invoicein_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - позицию
+  - invoicein
+- operation_id: ms_get_invoicein_by_invoicein_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - позицию
+  - invoicein
+- operation_id: ms_put_invoicein_by_invoicein_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoicein/{invoicein_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_in.md
+  keywords:
+  - позицию
+  - invoicein
+- operation_id: ms_post_invoiceout
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout
+  scope: ''
+  safety: write
+  summary: Создать Счет покупателю
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - счет
+  - покупателю
+  - invoiceout
+- operation_id: ms_post_invoiceout_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Счетов покупателям
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - счетов
+  - покупателям
+  - invoiceout
+- operation_id: ms_get_invoiceout_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Счетов покупателям
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - метаданные
+  - счетов
+  - покупателям
+  - invoiceout
+- operation_id: ms_get_invoiceout_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - invoiceout
+- operation_id: ms_put_invoiceout_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/new
+  scope: ''
+  safety: write
+  summary: Шаблон Счета покупателю
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - счета
+  - покупателю
+  - invoiceout
+- operation_id: ms_delete_invoiceout_by_invoiceout
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Счет покупателю
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - счет
+  - покупателю
+  - invoiceout
+- operation_id: ms_get_invoiceout_by_invoiceout
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}
+  scope: ''
+  safety: read
+  summary: Получить Счет покупателю
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - счет
+  - покупателю
+  - invoiceout
+- operation_id: ms_put_invoiceout_by_invoiceout
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}
+  scope: ''
+  safety: write
+  summary: Изменить Счет покупателю
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - счет
+  - покупателю
+  - invoiceout
+- operation_id: ms_get_invoiceout_by_invoiceout_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Счета покупателю
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - позиции
+  - счета
+  - покупателю
+  - invoiceout
+- operation_id: ms_post_invoiceout_by_invoiceout_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - позицию
+  - invoiceout
+- operation_id: ms_post_invoiceout_by_invoiceout_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - позиций
+  - invoiceout
+- operation_id: ms_delete_invoiceout_by_invoiceout_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - позицию
+  - invoiceout
+- operation_id: ms_get_invoiceout_by_invoiceout_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - позицию
+  - invoiceout
+- operation_id: ms_put_invoiceout_by_invoiceout_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/invoiceout/{invoiceout_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_invoice_out.md
+  keywords:
+  - позицию
+  - invoiceout
+- operation_id: ms_get_loss
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss
+  scope: ''
+  safety: read
+  summary: Получить Списания
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списания
+  - loss
+- operation_id: ms_post_loss
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss
+  scope: ''
+  safety: write
+  summary: Создать Списание
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списание
+  - loss
+- operation_id: ms_post_loss_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Списаний
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списаний
+  - loss
+- operation_id: ms_get_loss_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Списаний
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - метаданные
+  - списаний
+  - loss
+- operation_id: ms_get_loss_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - loss
+- operation_id: ms_put_loss_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/new
+  scope: ''
+  safety: write
+  summary: Шаблон Списания
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списания
+  - loss
+- operation_id: ms_delete_loss_by_loss
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Списание
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списание
+  - loss
+- operation_id: ms_get_loss_by_loss
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}
+  scope: ''
+  safety: read
+  summary: Получить Списание
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списание
+  - loss
+- operation_id: ms_put_loss_by_loss
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}
+  scope: ''
+  safety: write
+  summary: Изменить Списание
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - списание
+  - loss
+- operation_id: ms_get_loss_by_loss_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Списания
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - позиции
+  - списания
+  - loss
+- operation_id: ms_post_loss_by_loss_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - позицию
+  - loss
+- operation_id: ms_post_loss_by_loss_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - позиций
+  - loss
+- operation_id: ms_delete_loss_by_loss_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - позицию
+  - loss
+- operation_id: ms_get_loss_by_loss_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - позицию
+  - loss
+- operation_id: ms_put_loss_by_loss_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/loss/{loss_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_loss.md
+  keywords:
+  - позицию
+  - loss
+- operation_id: ms_get_metadata
+  section: general
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/_general.md
+  keywords:
+  - метаданные
+  - metadata
+- operation_id: ms_get_move
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move
+  scope: ''
+  safety: read
+  summary: Получить Перемещения
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещения
+  - move
+- operation_id: ms_post_move
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move
+  scope: ''
+  safety: write
+  summary: Создать Перемещение
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещение
+  - move
+- operation_id: ms_post_move_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Перемещений
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещений
+  - move
+- operation_id: ms_get_move_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Перемещений
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - метаданные
+  - перемещений
+  - move
+- operation_id: ms_get_move_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - move
+- operation_id: ms_put_move_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/new
+  scope: ''
+  safety: write
+  summary: Шаблон Перемещения
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещения
+  - move
+- operation_id: ms_delete_move_by_move
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Перемещение
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещение
+  - move
+- operation_id: ms_get_move_by_move
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}
+  scope: ''
+  safety: read
+  summary: Получить Перемещение
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещение
+  - move
+- operation_id: ms_put_move_by_move
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}
+  scope: ''
+  safety: write
+  summary: Изменить Перемещение
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - перемещение
+  - move
+- operation_id: ms_get_move_by_move_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - позиции
+  - move
+- operation_id: ms_post_move_by_move_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - позицию
+  - move
+- operation_id: ms_post_move_by_move_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - позиций
+  - move
+- operation_id: ms_delete_move_by_move_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - позицию
+  - move
+- operation_id: ms_get_move_by_move_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - позицию
+  - move
+- operation_id: ms_put_move_by_move_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_move.md
+  keywords:
+  - позицию
+  - move
+- operation_id: ms_post_move_by_move_trash
+  section: general
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/move/{move_id}/trash
+  scope: ''
+  safety: write
+  summary: Удаление в корзину
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/_general.md
+  keywords:
+  - корзину
+  - move
+- operation_id: ms_get_organization
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization
+  scope: ''
+  safety: read
+  summary: Получить список юрлиц
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - юрлиц
+  - organization
+- operation_id: ms_post_organization
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization
+  scope: ''
+  safety: write
+  summary: Создать юрлицо
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - юрлицо
+  - organization
+- operation_id: ms_post_organization_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Организаций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - организаций
+  - organization
+- operation_id: ms_get_organization_metadata
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные юрлиц
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - метаданные
+  - юрлиц
+  - organization
+- operation_id: ms_get_organization_metadata_attributes_by_attributes
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - organization
+- operation_id: ms_delete_organization_by_organization
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить юрлицо
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - юрлицо
+  - organization
+- operation_id: ms_get_organization_by_organization
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}
+  scope: ''
+  safety: read
+  summary: Получить юрлицо
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - юрлицо
+  - organization
+- operation_id: ms_put_organization_by_organization
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}
+  scope: ''
+  safety: write
+  summary: Изменить юрлицо
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - юрлицо
+  - organization
+- operation_id: ms_get_organization_by_organization_accounts
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}/accounts
+  scope: ''
+  safety: read
+  summary: Получить список счетов юрлица
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - счетов
+  - юрлица
+  - organization
+- operation_id: ms_post_organization_by_organization_accounts
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}/accounts
+  scope: ''
+  safety: write
+  summary: Изменить счета юрлица
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - счета
+  - юрлица
+  - organization
+- operation_id: ms_get_organization_by_organization_accounts_by_accounts
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}/accounts/{accounts_id}
+  scope: ''
+  safety: read
+  summary: Получить счет юрлица
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - счет
+  - юрлица
+  - organization
+- operation_id: ms_put_organization_by_organization_accounts_by_accounts
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/organization/{organization_id}/accounts/{accounts_id}
+  scope: ''
+  safety: write
+  summary: Изменить счет юрлица
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_organization.md
+  keywords:
+  - счет
+  - юрлица
+  - organization
+- operation_id: ms_get_paymentin
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin
+  scope: ''
+  safety: read
+  summary: Получить Входящие платежи
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящие
+  - платежи
+  - paymentin
+- operation_id: ms_post_paymentin
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin
+  scope: ''
+  safety: write
+  summary: Создать Входящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящий
+  - платеж
+  - paymentin
+- operation_id: ms_post_paymentin_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Входящих платежей
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящих
+  - платежей
+  - paymentin
+- operation_id: ms_get_paymentin_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Входящих платежей
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - метаданные
+  - входящих
+  - платежей
+  - paymentin
+- operation_id: ms_get_paymentin_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - paymentin
+- operation_id: ms_put_paymentin_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/new
+  scope: ''
+  safety: write
+  summary: Шаблон Входящего платежа
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящего
+  - платежа
+  - paymentin
+- operation_id: ms_delete_paymentin_by_paymentin
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/{paymentin_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Входящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящий
+  - платеж
+  - paymentin
+- operation_id: ms_get_paymentin_by_paymentin
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/{paymentin_id}
+  scope: ''
+  safety: read
+  summary: Получить Входящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящий
+  - платеж
+  - paymentin
+- operation_id: ms_put_paymentin_by_paymentin
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentin/{paymentin_id}
+  scope: ''
+  safety: write
+  summary: Изменить Входящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_in.md
+  keywords:
+  - входящий
+  - платеж
+  - paymentin
+- operation_id: ms_get_paymentout
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout
+  scope: ''
+  safety: read
+  summary: Получить Исходящие платежи
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящие
+  - платежи
+  - paymentout
+- operation_id: ms_post_paymentout
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout
+  scope: ''
+  safety: write
+  summary: Создать Исходящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящий
+  - платеж
+  - paymentout
+- operation_id: ms_post_paymentout_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Исходящих платежей
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящих
+  - платежей
+  - paymentout
+- operation_id: ms_get_paymentout_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Исходящих платежей
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - метаданные
+  - исходящих
+  - платежей
+  - paymentout
+- operation_id: ms_get_paymentout_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - paymentout
+- operation_id: ms_put_paymentout_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/new
+  scope: ''
+  safety: write
+  summary: Шаблон Исходящего платежа
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящего
+  - платежа
+  - paymentout
+- operation_id: ms_delete_paymentout_by_paymentout
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/{paymentout_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Исходящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящий
+  - платеж
+  - paymentout
+- operation_id: ms_get_paymentout_by_paymentout
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/{paymentout_id}
+  scope: ''
+  safety: read
+  summary: Получить Исходящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящий
+  - платеж
+  - paymentout
+- operation_id: ms_put_paymentout_by_paymentout
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/paymentout/{paymentout_id}
+  scope: ''
+  safety: write
+  summary: Изменить Исходящий платеж
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payment_out.md
+  keywords:
+  - исходящий
+  - платеж
+  - paymentout
+- operation_id: ms_get_payroll
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll
+  scope: ''
+  safety: read
+  summary: Получить список Начисления зарплат
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - начисления
+  - зарплат
+  - payroll
+- operation_id: ms_post_payroll
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll
+  scope: ''
+  safety: write
+  summary: Создать Начисление зарплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - начисление
+  - зарплаты
+  - payroll
+- operation_id: ms_post_payroll_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Начисления зарплат
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - начисления
+  - зарплат
+  - payroll
+- operation_id: ms_get_payroll_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Начисления зарплат
+  pagination: offset
+  items_path: states
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - метаданные
+  - начисления
+  - зарплат
+  - payroll
+- operation_id: ms_get_payroll_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - payroll
+- operation_id: ms_delete_payroll_by_payroll
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Начисления зарплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - начисления
+  - зарплаты
+  - payroll
+- operation_id: ms_get_payroll_by_payroll
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}
+  scope: ''
+  safety: read
+  summary: Получить Начисления зарплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - начисления
+  - зарплаты
+  - payroll
+- operation_id: ms_put_payroll_by_payroll
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}
+  scope: ''
+  safety: write
+  summary: Изменить Начисление зарплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - начисление
+  - зарплаты
+  - payroll
+- operation_id: ms_get_payroll_by_payroll_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - позиции
+  - payroll
+- operation_id: ms_post_payroll_by_payroll_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - позицию
+  - payroll
+- operation_id: ms_post_payroll_by_payroll_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - позиций
+  - payroll
+- operation_id: ms_delete_payroll_by_payroll_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - позицию
+  - payroll
+- operation_id: ms_get_payroll_by_payroll_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - позицию
+  - payroll
+- operation_id: ms_put_payroll_by_payroll_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/payroll/{payroll_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_payroll.md
+  keywords:
+  - позицию
+  - payroll
+- operation_id: ms_post_personaldiscount
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/personaldiscount
+  scope: ''
+  safety: write
+  summary: Создать персональную скидку
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_discount.md
+  keywords:
+  - персональную
+  - скидку
+  - personaldiscount
+- operation_id: ms_delete_personaldiscount_by_personaldiscount
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/personaldiscount/{personaldiscount_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить персональную скидку
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_discount.md
+  keywords:
+  - персональную
+  - скидку
+  - personaldiscount
+- operation_id: ms_get_personaldiscount_by_personaldiscount
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/personaldiscount/{personaldiscount_id}
+  scope: ''
+  safety: read
+  summary: Получить персональную скидку
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_discount.md
+  keywords:
+  - персональную
+  - скидку
+  - personaldiscount
+- operation_id: ms_put_personaldiscount_by_personaldiscount
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/personaldiscount/{personaldiscount_id}
+  scope: ''
+  safety: write
+  summary: Изменить персональную скидку
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_discount.md
+  keywords:
+  - персональную
+  - скидку
+  - personaldiscount
+- operation_id: ms_get_prepayment
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment
+  scope: ''
+  safety: read
+  summary: Получить список Предоплат
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - предоплат
+  - prepayment
+- operation_id: ms_get_prepayment_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Предоплат
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - метаданные
+  - предоплат
+  - prepayment
+- operation_id: ms_get_prepayment_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - prepayment
+- operation_id: ms_delete_prepayment_by_prepayment
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment/{prepayment_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Предоплату
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - предоплату
+  - prepayment
+- operation_id: ms_get_prepayment_by_prepayment
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment/{prepayment_id}
+  scope: ''
+  safety: read
+  summary: Получить Предоплату
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - предоплату
+  - prepayment
+- operation_id: ms_get_prepayment_by_prepayment_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment/{prepayment_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Предоплаты
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - позиции
+  - предоплаты
+  - prepayment
+- operation_id: ms_get_prepayment_by_prepayment_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepayment/{prepayment_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Позиция Предоплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment.md
+  keywords:
+  - позиция
+  - предоплаты
+  - prepayment
+- operation_id: ms_get_prepaymentreturn
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn
+  scope: ''
+  safety: read
+  summary: Получить список Возвратов предоплаты
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - возвратов
+  - предоплаты
+  - prepaymentreturn
+- operation_id: ms_get_prepaymentreturn_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Возвратов предоплат
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - метаданные
+  - возвратов
+  - предоплат
+  - prepaymentreturn
+- operation_id: ms_get_prepaymentreturn_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - prepaymentreturn
+- operation_id: ms_delete_prepaymentreturn_by_prepaymentreturn
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn/{prepaymentreturn_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Возврат предоплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - возврат
+  - предоплаты
+  - prepaymentreturn
+- operation_id: ms_get_prepaymentreturn_by_prepaymentreturn
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn/{prepaymentreturn_id}
+  scope: ''
+  safety: read
+  summary: Получить Возврат предоплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - возврат
+  - предоплаты
+  - prepaymentreturn
+- operation_id: ms_get_prepaymentreturn_by_prepaymentreturn_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn/{prepaymentreturn_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Возврата предоплаты
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - позиции
+  - возврата
+  - предоплаты
+  - prepaymentreturn
+- operation_id: ms_get_prepaymentreturn_by_prepaymentreturn_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/prepaymentreturn/{prepaymentreturn_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию Возврата предоплаты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_prepayment_return.md
+  keywords:
+  - позицию
+  - возврата
+  - предоплаты
+  - prepaymentreturn
+- operation_id: ms_get_pricelist
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist
+  scope: ''
+  safety: read
+  summary: Получить список Прайс-листов
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - прайс
+  - листов
+  - pricelist
+- operation_id: ms_post_pricelist
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist
+  scope: ''
+  safety: write
+  summary: Создать Прайс-лист
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - прайс
+  - лист
+  - pricelist
+- operation_id: ms_post_pricelist_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Прайс-листов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - прайс
+  - листов
+  - pricelist
+- operation_id: ms_get_pricelist_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Прайс-листов
+  pagination: offset
+  items_path: attributes
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - метаданные
+  - прайс
+  - листов
+  - pricelist
+- operation_id: ms_get_pricelist_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - pricelist
+- operation_id: ms_delete_pricelist_by_pricelist
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Прайс-лист
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - прайс
+  - лист
+  - pricelist
+- operation_id: ms_get_pricelist_by_pricelist
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}
+  scope: ''
+  safety: read
+  summary: Получить Прайс-лист
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - прайс
+  - лист
+  - pricelist
+- operation_id: ms_put_pricelist_by_pricelist
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}
+  scope: ''
+  safety: write
+  summary: Изменить Прайс-лист
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - прайс
+  - лист
+  - pricelist
+- operation_id: ms_get_pricelist_by_pricelist_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Прайс-листа
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - позиции
+  - прайс
+  - листа
+  - pricelist
+- operation_id: ms_post_pricelist_by_pricelist_positions
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - позицию
+  - pricelist
+- operation_id: ms_post_pricelist_by_pricelist_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - позиций
+  - pricelist
+- operation_id: ms_delete_pricelist_by_pricelist_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - позицию
+  - pricelist
+- operation_id: ms_get_pricelist_by_pricelist_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - позицию
+  - pricelist
+- operation_id: ms_put_pricelist_by_pricelist_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/pricelist/{pricelist_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_pricelist.md
+  keywords:
+  - позицию
+  - pricelist
+- operation_id: ms_get_processing
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing
+  scope: ''
+  safety: read
+  summary: Получить список Техопераций
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техопераций
+  - processing
+- operation_id: ms_post_processing
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing
+  scope: ''
+  safety: write
+  summary: Создать Техоперацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техоперацию
+  - processing
+- operation_id: ms_post_processing_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Техопераций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техопераций
+  - processing
+- operation_id: ms_get_processing_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Техопераций
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - метаданные
+  - техопераций
+  - processing
+- operation_id: ms_get_processing_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - processing
+- operation_id: ms_put_processing_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/new
+  scope: ''
+  safety: write
+  summary: Шаблон Техоперации
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техоперации
+  - processing
+- operation_id: ms_delete_processing_by_processing
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Техоперацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техоперацию
+  - processing
+- operation_id: ms_get_processing_by_processing
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}
+  scope: ''
+  safety: read
+  summary: Получить Техоперацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техоперацию
+  - processing
+- operation_id: ms_put_processing_by_processing
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}
+  scope: ''
+  safety: write
+  summary: Изменить Техоперацию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - техоперацию
+  - processing
+- operation_id: ms_get_processing_by_processing_materials
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/materials
+  scope: ''
+  safety: read
+  summary: Получить материалы Техоперации
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - материалы
+  - техоперации
+  - processing
+- operation_id: ms_post_processing_by_processing_materials
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/materials
+  scope: ''
+  safety: write
+  summary: Добавить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - добавить
+  - материал
+  - processing
+- operation_id: ms_post_processing_by_processing_materials_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/materials/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление материалов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - материалов
+  - processing
+- operation_id: ms_delete_processing_by_processing_materials_by_materials
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/materials/{materials_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - материал
+  - processing
+- operation_id: ms_get_processing_by_processing_materials_by_materials
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/materials/{materials_id}
+  scope: ''
+  safety: read
+  summary: Получить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - материал
+  - processing
+- operation_id: ms_put_processing_by_processing_materials_by_materials
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/materials/{materials_id}
+  scope: ''
+  safety: write
+  summary: Изменить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - материал
+  - processing
+- operation_id: ms_get_processing_by_processing_products
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/products
+  scope: ''
+  safety: read
+  summary: Получить продукты Техоперации
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - продукты
+  - техоперации
+  - processing
+- operation_id: ms_post_processing_by_processing_products
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/products
+  scope: ''
+  safety: write
+  summary: Добавить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - добавить
+  - продукт
+  - processing
+- operation_id: ms_post_processing_by_processing_products_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/products/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление продуктов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - продуктов
+  - processing
+- operation_id: ms_delete_processing_by_processing_products_by_products
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/products/{products_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - продукт
+  - processing
+- operation_id: ms_get_processing_by_processing_products_by_products
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/products/{products_id}
+  scope: ''
+  safety: read
+  summary: Получить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - продукт
+  - processing
+- operation_id: ms_put_processing_by_processing_products_by_products
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processing/{processing_id}/products/{products_id}
+  scope: ''
+  safety: write
+  summary: Изменить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processing.md
+  keywords:
+  - продукт
+  - processing
+- operation_id: ms_get_processingorder
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder
+  scope: ''
+  safety: read
+  summary: Получить список Заказов на производство
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказов
+  - производство
+  - processingorder
+- operation_id: ms_post_processingorder
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder
+  scope: ''
+  safety: write
+  summary: Создать Заказ на производство
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказ
+  - производство
+  - processingorder
+- operation_id: ms_post_processingorder_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Заказов на производство
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказов
+  - производство
+  - processingorder
+- operation_id: ms_get_processingorder_metadata
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Заказов на производство
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - метаданные
+  - заказов
+  - производство
+  - processingorder
+- operation_id: ms_get_processingorder_metadata_attributes_by_attributes
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - processingorder
+- operation_id: ms_put_processingorder_new
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/new
+  scope: ''
+  safety: write
+  summary: Шаблон Заказа на производство
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказа
+  - производство
+  - processingorder
+- operation_id: ms_delete_processingorder_by_processingorder
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Заказ на производство
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказ
+  - производство
+  - processingorder
+- operation_id: ms_get_processingorder_by_processingorder
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}
+  scope: ''
+  safety: read
+  summary: Получить Заказ на производство
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказ
+  - производство
+  - processingorder
+- operation_id: ms_put_processingorder_by_processingorder
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}
+  scope: ''
+  safety: write
+  summary: Изменить Заказ на производство
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - заказ
+  - производство
+  - processingorder
+- operation_id: ms_get_processingorder_by_processingorder_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Заказа на производство
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - позиции
+  - заказа
+  - производство
+  - processingorder
+- operation_id: ms_post_processingorder_by_processingorder_positions_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - позиций
+  - processingorder
+- operation_id: ms_delete_processingorder_by_processingorder_positions_by_positions
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - позицию
+  - processingorder
+- operation_id: ms_get_processingorder_by_processingorder_positions_by_positions
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - позицию
+  - processingorder
+- operation_id: ms_put_processingorder_by_processingorder_positions_by_positions
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingorder/{processingorder_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_processingorder.md
+  keywords:
+  - позицию
+  - processingorder
+- operation_id: ms_get_processingplan
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan
+  scope: ''
+  safety: read
+  summary: Получить список Техкарт
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - техкарт
+  - processingplan
+- operation_id: ms_post_processingplan
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan
+  scope: ''
+  safety: write
+  summary: Создать Техкарту
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - техкарту
+  - processingplan
+- operation_id: ms_post_processingplan_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Техкарт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - техкарт
+  - processingplan
+- operation_id: ms_delete_processingplan_by_processingplan
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Техкарту
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - техкарту
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}
+  scope: ''
+  safety: read
+  summary: Получить Техкарту
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - техкарту
+  - processingplan
+- operation_id: ms_put_processingplan_by_processingplan
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}
+  scope: ''
+  safety: write
+  summary: Изменить Техкарту
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - техкарту
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan_materials
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/materials
+  scope: ''
+  safety: read
+  summary: Получить материалы Техкарты
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - материалы
+  - техкарты
+  - processingplan
+- operation_id: ms_post_processingplan_by_processingplan_materials
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/materials
+  scope: ''
+  safety: write
+  summary: Создать материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - материал
+  - processingplan
+- operation_id: ms_post_processingplan_by_processingplan_materials_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/materials/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление материалов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - материалов
+  - processingplan
+- operation_id: ms_delete_processingplan_by_processingplan_materials_by_materials
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/materials/{materials_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - материал
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan_materials_by_materials
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/materials/{materials_id}
+  scope: ''
+  safety: read
+  summary: Получить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - материал
+  - processingplan
+- operation_id: ms_put_processingplan_by_processingplan_materials_by_materials
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/materials/{materials_id}
+  scope: ''
+  safety: write
+  summary: Изменить материал
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - материал
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan_products
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/products
+  scope: ''
+  safety: read
+  summary: Получить продукты Техкарты
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - продукты
+  - техкарты
+  - processingplan
+- operation_id: ms_post_processingplan_by_processingplan_products
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/products
+  scope: ''
+  safety: write
+  summary: Создать продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - продукт
+  - processingplan
+- operation_id: ms_post_processingplan_by_processingplan_products_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/products/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление продукта
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - продукта
+  - processingplan
+- operation_id: ms_delete_processingplan_by_processingplan_products_by_products
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/products/{products_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - продукт
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan_products_by_products
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/products/{products_id}
+  scope: ''
+  safety: read
+  summary: Получить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - продукт
+  - processingplan
+- operation_id: ms_put_processingplan_by_processingplan_products_by_products
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/products/{products_id}
+  scope: ''
+  safety: write
+  summary: Изменить продукт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - продукт
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan_stages
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/stages
+  scope: ''
+  safety: read
+  summary: Получить этапы Техкарты
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - этапы
+  - техкарты
+  - processingplan
+- operation_id: ms_get_processingplan_by_processingplan_stages_by_stages
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/stages/{stages_id}
+  scope: ''
+  safety: read
+  summary: Получить отдельный этап Техкарты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - отдельный
+  - этап
+  - техкарты
+  - processingplan
+- operation_id: ms_put_processingplan_by_processingplan_stages_by_stages
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplan/{processingplan_id}/stages/{stages_id}
+  scope: ''
+  safety: write
+  summary: Изменить отдельный этап Техкарты
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplan.md
+  keywords:
+  - отдельный
+  - этап
+  - техкарты
+  - processingplan
+- operation_id: ms_get_processingplanfolder
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder
+  scope: ''
+  safety: read
+  summary: Получить список Групп техкарт
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - групп
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_post_processingplanfolder
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder
+  scope: ''
+  safety: write
+  summary: Создать новую Группу техкарт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - новую
+  - группу
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_post_processingplanfolder_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Групп техкарт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - групп
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_get_processingplanfolder_metadata
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder/metadata
+  scope: ''
+  safety: read
+  summary: Метаданные Групп техкарт
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - метаданные
+  - групп
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_delete_processingplanfolder_by_processingplanfolder
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder/{processingplanfolder_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Группу техкарт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - группу
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_get_processingplanfolder_by_processingplanfolder
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder/{processingplanfolder_id}
+  scope: ''
+  safety: read
+  summary: Получить Группу техкарт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - группу
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_put_processingplanfolder_by_processingplanfolder
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingplanfolder/{processingplanfolder_id}
+  scope: ''
+  safety: write
+  summary: Изменить Группу техкарт
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingplanfolder.md
+  keywords:
+  - группу
+  - техкарт
+  - processingplanfolder
+- operation_id: ms_get_processingprocess
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess
+  scope: ''
+  safety: read
+  summary: Получить список Техпроцессов
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - техпроцессов
+  - processingprocess
+- operation_id: ms_post_processingprocess
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess
+  scope: ''
+  safety: write
+  summary: Создать Техпроцесс
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - техпроцесс
+  - processingprocess
+- operation_id: ms_post_processingprocess_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Техпроцессов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - техпроцессов
+  - processingprocess
+- operation_id: ms_delete_processingprocess_by_processingprocess
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Техпроцесс
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - техпроцесс
+  - processingprocess
+- operation_id: ms_get_processingprocess_by_processingprocess
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}
+  scope: ''
+  safety: read
+  summary: Получить Техпроцесс
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - техпроцесс
+  - processingprocess
+- operation_id: ms_put_processingprocess_by_processingprocess
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}
+  scope: ''
+  safety: write
+  summary: Изменить Техпроцесс
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - техпроцесс
+  - processingprocess
+- operation_id: ms_get_processingprocess_by_processingprocess_positions
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}/positions
+  scope: ''
+  safety: read
+  summary: Получить позиции Техпроцесса
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - позиции
+  - техпроцесса
+  - processingprocess
+- operation_id: ms_post_processingprocess_by_processingprocess_positions
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}/positions
+  scope: ''
+  safety: write
+  summary: Создать позиции Техпроцесса
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - позиции
+  - техпроцесса
+  - processingprocess
+- operation_id: ms_post_processingprocess_by_processingprocess_positions_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}/positions/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление позиций Техпроцесса
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - позиций
+  - техпроцесса
+  - processingprocess
+- operation_id: ms_delete_processingprocess_by_processingprocess_positions_by_positions
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}/positions/{positions_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить позицию Техпроцесса
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - позицию
+  - техпроцесса
+  - processingprocess
+- operation_id: ms_get_processingprocess_by_processingprocess_positions_by_positions
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}/positions/{positions_id}
+  scope: ''
+  safety: read
+  summary: Получить отдельную позицию Техпроцесса
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - отдельную
+  - позицию
+  - техпроцесса
+  - processingprocess
+- operation_id: ms_put_processingprocess_by_processingprocess_positions_by_positions
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingprocess/{processingprocess_id}/positions/{positions_id}
+  scope: ''
+  safety: write
+  summary: Изменить позицию Техпроцесса
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingprocess.md
+  keywords:
+  - позицию
+  - техпроцесса
+  - processingprocess
+- operation_id: ms_get_processingstage
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingstage
+  scope: ''
+  safety: read
+  summary: Получить список Этапов
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingstage.md
+  keywords:
+  - этапов
+  - processingstage
+- operation_id: ms_post_processingstage
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingstage
+  scope: ''
+  safety: write
+  summary: Создать Этап
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingstage.md
+  keywords:
+  - этап
+  - processingstage
+- operation_id: ms_post_processingstage_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingstage/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Этапов
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingstage.md
+  keywords:
+  - этапов
+  - processingstage
+- operation_id: ms_delete_processingstage_by_processingstage
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingstage/{processingstage_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Этап
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingstage.md
+  keywords:
+  - этап
+  - processingstage
+- operation_id: ms_get_processingstage_by_processingstage
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingstage/{processingstage_id}
+  scope: ''
+  safety: read
+  summary: Получить Этап
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingstage.md
+  keywords:
+  - этап
+  - processingstage
+- operation_id: ms_put_processingstage_by_processingstage
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/processingstage/{processingstage_id}
+  scope: ''
+  safety: write
+  summary: Изменить Этап
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_processingstage.md
+  keywords:
+  - этап
+  - processingstage
+- operation_id: ms_get_product
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product
+  scope: ''
+  safety: read
+  summary: Получить список Товаров
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - товаров
+  - product
+- operation_id: ms_post_product
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product
+  scope: ''
+  safety: write
+  summary: Создать Товар
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - товар
+  - product
+- operation_id: ms_post_product_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Товаров
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - товаров
+  - product
+- operation_id: ms_get_product_metadata
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata
+  scope: ''
+  safety: read
+  summary: Запросы - Метаданные Товаров
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - метаданные
+  - товаров
+  - product
+- operation_id: ms_get_product_metadata_attributes
+  section: workbook
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata/attributes
+  scope: ''
+  safety: read
+  summary: Получение дополнительных полей
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/workbook/_workbook_attributes_crud.md
+  keywords:
+  - дополнительных
+  - полей
+  - product
+- operation_id: ms_post_product_metadata_attributes
+  section: workbook
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata/attributes
+  scope: ''
+  safety: write
+  summary: Создание нового дополнительного поля через JSON API
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/workbook/_workbook_attributes_crud.md
+  keywords:
+  - нового
+  - дополнительного
+  - поля
+  - через
+  - json
+  - api
+  - product
+- operation_id: ms_post_product_metadata_attributes_delete
+  section: workbook
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata/attributes/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление дополнительных полей через JSON API
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/workbook/_workbook_attributes_crud.md
+  keywords:
+  - дополнительных
+  - полей
+  - через
+  - json
+  - api
+  - product
+- operation_id: ms_delete_product_metadata_attributes_by_attributes
+  section: workbook
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: destructive
+  summary: Удаление дополнительного поля через JSON API
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/workbook/_workbook_attributes_crud.md
+  keywords:
+  - дополнительного
+  - поля
+  - через
+  - json
+  - api
+  - product
+- operation_id: ms_get_product_metadata_attributes_by_attributes
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: read
+  summary: Отдельное доп. поле
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - product
+- operation_id: ms_put_product_metadata_attributes_by_attributes
+  section: workbook
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/metadata/attributes/{attributes_id}
+  scope: ''
+  safety: write
+  summary: Редактирование дополнительных полей через JSON API
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/workbook/_workbook_attributes_crud.md
+  keywords:
+  - редактирование
+  - дополнительных
+  - полей
+  - через
+  - json
+  - api
+  - product
+- operation_id: ms_get_product_namedfilter
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/namedfilter
+  scope: ''
+  safety: read
+  summary: Получить список фильтров
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_named_filter.md
+  keywords:
+  - фильтров
+  - product
+- operation_id: ms_get_product_namedfilter_by_namedfilter
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/namedfilter/{namedfilter_id}
+  scope: ''
+  safety: read
+  summary: Получить фильтр по id
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_named_filter.md
+  keywords:
+  - фильтр
+  - product
+- operation_id: ms_delete_product_by_product
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Товар
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - товар
+  - product
+- operation_id: ms_get_product_by_product
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}
+  scope: ''
+  safety: read
+  summary: Получить Товар
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - товар
+  - product
+- operation_id: ms_put_product_by_product
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}
+  scope: ''
+  safety: write
+  summary: Изменить Товар
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_product.md
+  keywords:
+  - товар
+  - product
+- operation_id: ms_get_product_by_product_audit
+  section: audit
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/audit
+  scope: ''
+  safety: read
+  summary: Получить События по Сущности
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/audit/_audit.md
+  keywords:
+  - события
+  - сущности
+  - product
+- operation_id: ms_post_product_by_product_export
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/export
+  scope: ''
+  safety: write
+  summary: Запрос на печать этикеток и ценников
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_labels.md
+  keywords:
+  - запрос
+  - печать
+  - этикеток
+  - ценников
+  - product
+- operation_id: ms_get_product_by_product_files
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/files
+  scope: ''
+  safety: read
+  summary: Получить список Файлов Операции, Номенклатуры, Задачи или Контрагента
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_files.md
+  keywords:
+  - файлов
+  - операции
+  - номенклатуры
+  - задачи
+  - или
+  - контрагента
+  - product
+- operation_id: ms_post_product_by_product_files
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/files
+  scope: ''
+  safety: write
+  summary: Добавить Файлы к Операции, Номенклатуре или Контрагенту
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_files.md
+  keywords:
+  - добавить
+  - файлы
+  - операции
+  - номенклатуре
+  - или
+  - контрагенту
+  - product
+- operation_id: ms_delete_product_by_product_files_by_files
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/files/{files_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Файл
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_files.md
+  keywords:
+  - файл
+  - product
+- operation_id: ms_get_product_by_product_images
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/images
+  scope: ''
+  safety: read
+  summary: Получить список Изображений Товара, Комплекта и Модификации
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_images.md
+  keywords:
+  - изображений
+  - товара
+  - комплекта
+  - модификации
+  - product
+- operation_id: ms_post_product_by_product_images
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/images
+  scope: ''
+  safety: write
+  summary: Добавить Изображение к Товару, Комплекту или Модификации
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_images.md
+  keywords:
+  - добавить
+  - изображение
+  - товару
+  - комплекту
+  - или
+  - модификации
+  - product
+- operation_id: ms_post_product_by_product_images_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/images/delete
+  scope: ''
+  safety: destructive
+  summary: Удалить группу Изображений
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_images.md
+  keywords:
+  - группу
+  - изображений
+  - product
+- operation_id: ms_delete_product_by_product_images_by_images
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/product/{product_id}/images/{images_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Изображение
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_images.md
+  keywords:
+  - изображение
+  - product
+- operation_id: ms_get_productfolder
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productfolder
+  scope: ''
+  safety: read
+  summary: Получить список групп товаров
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_productFolder.md
+  keywords:
+  - групп
+  - товаров
+  - productfolder
+- operation_id: ms_post_productfolder
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productfolder
+  scope: ''
+  safety: write
+  summary: Создать новую группу товаров
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_productFolder.md
+  keywords:
+  - новую
+  - группу
+  - товаров
+  - productfolder
+- operation_id: ms_post_productfolder_delete
+  section: dictionaries
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productfolder/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Групп товаров
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_productFolder.md
+  keywords:
+  - групп
+  - товаров
+  - productfolder
+- operation_id: ms_delete_productfolder_by_productfolder
+  section: dictionaries
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productfolder/{productfolder_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Группу товаров
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_productFolder.md
+  keywords:
+  - группу
+  - товаров
+  - productfolder
+- operation_id: ms_get_productfolder_by_productfolder
+  section: dictionaries
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productfolder/{productfolder_id}
+  scope: ''
+  safety: read
+  summary: Получить Группу товаров
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_productFolder.md
+  keywords:
+  - группу
+  - товаров
+  - productfolder
+- operation_id: ms_put_productfolder_by_productfolder
+  section: dictionaries
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productfolder/{productfolder_id}
+  scope: ''
+  safety: write
+  summary: Изменить Группу товаров
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/dictionaries/_productFolder.md
+  keywords:
+  - группу
+  - товаров
+  - productfolder
+- operation_id: ms_get_productionstage
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstage
+  scope: ''
+  safety: read
+  summary: Получить список Производственных этапов Производственного задания
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionTask.md
+  keywords:
+  - производственных
+  - этапов
+  - производственного
+  - задания
+  - productionstage
+- operation_id: ms_put_productionstage_by_productionstage
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstage/{productionstage_id}
+  scope: ''
+  safety: write
+  summary: Изменить Производственный этап
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionTask.md
+  keywords:
+  - производственный
+  - этап
+  - productionstage
+- operation_id: ms_get_productionstage_by_productionstage_materials
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstage/{productionstage_id}/materials
+  scope: ''
+  safety: read
+  summary: Получить Материалы производственного этапа
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionTask.md
+  keywords:
+  - материалы
+  - производственного
+  - этапа
+  - productionstage
+- operation_id: ms_post_productionstage_by_productionstage_materials
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstage/{productionstage_id}/materials
+  scope: ''
+  safety: write
+  summary: Добавить Материал к производственному этапу
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionTask.md
+  keywords:
+  - добавить
+  - материал
+  - производственному
+  - этапу
+  - productionstage
+- operation_id: ms_delete_productionstage_by_productionstage_materials_by_materials
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstage/{productionstage_id}/materials/{materials_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Материал производственного этапа
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionTask.md
+  keywords:
+  - материал
+  - производственного
+  - этапа
+  - productionstage
+- operation_id: ms_put_productionstage_by_productionstage_materials_by_materials
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstage/{productionstage_id}/materials/{materials_id}
+  scope: ''
+  safety: write
+  summary: Изменить Материал производственного этапа
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionTask.md
+  keywords:
+  - материал
+  - производственного
+  - этапа
+  - productionstage
+- operation_id: ms_get_productionstagecompletion
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion
+  scope: ''
+  safety: read
+  summary: Получить список Выполнений этапов производства
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - выполнений
+  - этапов
+  - производства
+  - productionstagecompletion
+- operation_id: ms_post_productionstagecompletion
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion
+  scope: ''
+  safety: write
+  summary: Создать Выполнение этапа производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - выполнение
+  - этапа
+  - производства
+  - productionstagecompletion
+- operation_id: ms_post_productionstagecompletion_delete
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/delete
+  scope: ''
+  safety: destructive
+  summary: Массовое удаление Выполнений этапов производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - выполнений
+  - этапов
+  - производства
+  - productionstagecompletion
+- operation_id: ms_delete_productionstagecompletion_by_productionstagecompletion
+  section: documents
+  method: DELETE
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/{productionstagecompletion_id}
+  scope: ''
+  safety: destructive
+  summary: Удалить Выполнение этапа производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - выполнение
+  - этапа
+  - производства
+  - productionstagecompletion
+- operation_id: ms_get_productionstagecompletion_by_productionstagecompletion
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/{productionstagecompletion_id}
+  scope: ''
+  safety: read
+  summary: Получить Выполнение этапа производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - выполнение
+  - этапа
+  - производства
+  - productionstagecompletion
+- operation_id: ms_put_productionstagecompletion_by_productionstagecompletion
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/{productionstagecompletion_id}
+  scope: ''
+  safety: write
+  summary: Изменить Выполнение этапа производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - выполнение
+  - этапа
+  - производства
+  - productionstagecompletion
+- operation_id: ms_get_productionstagecompletion_by_productionstagecompletion_materials
+  section: documents
+  method: GET
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/{productionstagecompletion_id}/materials
+  scope: ''
+  safety: read
+  summary: Получить Материалы выполнения этапа производства
+  pagination: offset
+  items_path: rows
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - материалы
+  - выполнения
+  - этапа
+  - производства
+  - productionstagecompletion
+- operation_id: ms_post_productionstagecompletion_by_productionstagecompletion_materials
+  section: documents
+  method: POST
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/{productionstagecompletion_id}/materials
+  scope: ''
+  safety: write
+  summary: Добавить Материал выполнения этапа производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - добавить
+  - материал
+  - выполнения
+  - этапа
+  - производства
+  - productionstagecompletion
+- operation_id: ms_put_productionstagecompletion_by_productionstagecompletion_materials_by_materials
+  section: documents
+  method: PUT
+  host: api.moysklad.ru
+  path: /api/remap/1.2/entity/productionstagecompletion/{productionstagecompletion_id}/materials/{materials_id}
+  scope: ''
+  safety: write
+  summary: Изменить Материал выполнения этапа производства
+  pagination: none
+  items_path: ''
+  rate_limit: ''
+  doc: https://github.com/moysklad/api-remap-1.2-doc/blob/master/md/documents/_productionStageCompletion.md
+  keywords:
+  - материал
+  - выполнения
+  - этапа
+  - производства
+  - productionstagecompletion
